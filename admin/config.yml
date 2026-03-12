@@ -3,6 +3,7 @@ backend:
   repo: blubbernase/estetal
   branch: gh-pages
   auth_type: pkce
+  app_id: Ov23liCai4BqbUdFOL9f
 
 media_folder: "images"
 public_folder: "/images"
