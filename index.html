@@ -231,6 +231,56 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-st
 .footer__social a:hover{background:var(--green-600);color:var(--white)}
 .footer__bottom{margin-top:24px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:.72rem;color:rgba(255,255,255,.4)}
 
+/* ── Subpage Overlay ── */
+.subpage-overlay{position:fixed;inset:0;background:var(--cream);z-index:1500;display:none;overflow-y:auto;padding-top:calc(var(--mock-h) + var(--hdr) + 16px)}
+.subpage-overlay.open{display:block}
+.subpage{max-width:800px;margin:0 auto;padding:24px 20px 60px}
+.subpage__back{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-d);font-weight:600;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-700);margin-bottom:24px;cursor:pointer;background:none;border:none;padding:8px 0}
+.subpage__back:hover{color:var(--green-500)}
+.subpage__badge{display:inline-block;font-family:var(--font-d);font-weight:600;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:12px}
+.subpage__title{font-family:var(--font-d);font-weight:800;font-size:2rem;text-transform:uppercase;color:var(--green-900);line-height:1.1;margin-bottom:20px}
+.subpage__meta{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:28px}
+.subpage__meta-item{display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--gray-600);background:var(--white);padding:10px 16px;border-radius:var(--radius);box-shadow:var(--shadow-sm)}
+.subpage__meta-item .icon{font-size:1.1rem}
+.subpage__meta-item strong{color:var(--green-900)}
+.subpage__body{font-size:.92rem;line-height:1.7;color:var(--gray-600);margin-bottom:28px}
+.subpage__body p{margin-bottom:14px}
+.subpage__fussballde{display:inline-flex;align-items:center;gap:10px;background:var(--green-700);color:var(--white);font-family:var(--font-d);font-weight:700;font-size:.88rem;letter-spacing:.06em;text-transform:uppercase;padding:14px 24px;border-radius:var(--radius);transition:all .25s;margin-bottom:16px}
+.subpage__fussballde:hover{background:var(--green-600);color:var(--white)}
+.subpage__section{margin-top:32px;padding-top:24px;border-top:1px solid var(--gray-200)}
+.subpage__section-title{font-family:var(--font-d);font-weight:700;font-size:1.05rem;text-transform:uppercase;color:var(--green-900);margin-bottom:16px}
+.subpage__kader-hint{font-size:.85rem;color:var(--gray-400);font-style:italic}
+
+/* ── News List / Stream ── */
+.news-stream{display:flex;flex-direction:column;gap:20px}
+.news-stream-item{display:flex;gap:20px;background:var(--white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:all .3s;cursor:pointer;border:1px solid rgba(0,0,0,.04)}
+.news-stream-item:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.news-stream-item__img{width:180px;min-height:140px;object-fit:cover;flex-shrink:0}
+@media(max-width:640px){.news-stream-item{flex-direction:column}.news-stream-item__img{width:100%;height:180px}}
+.news-stream-item__body{padding:20px;flex:1}
+.news-stream-item__date{font-size:.75rem;color:var(--gray-400);margin-bottom:4px}
+.news-stream-item__title{font-family:var(--font-d);font-weight:700;font-size:1.05rem;text-transform:uppercase;color:var(--green-900);margin-bottom:8px;line-height:1.2}
+.news-stream-item__excerpt{font-size:.85rem;color:var(--gray-600);line-height:1.6}
+
+/* ── Ehrenamt Landing ── */
+.ehrenamt-hero{background:linear-gradient(135deg,var(--green-900),var(--green-700));color:var(--white);border-radius:var(--radius-lg);padding:40px 32px;margin-bottom:28px;position:relative;overflow:hidden}
+.ehrenamt-hero::after{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:rgba(255,255,255,.04);border-radius:50%}
+.ehrenamt-hero__title{font-family:var(--font-d);font-weight:800;font-size:1.8rem;text-transform:uppercase;margin-bottom:12px}
+.ehrenamt-hero__text{font-size:.92rem;line-height:1.7;opacity:.85;max-width:600px}
+.ehrenamt-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:16px;margin:24px 0}
+.ehrenamt-stat{background:var(--white);border-radius:var(--radius);padding:20px;text-align:center;box-shadow:var(--shadow-sm)}
+.ehrenamt-stat__num{font-family:var(--font-d);font-weight:800;font-size:2rem;color:var(--green-700)}
+.ehrenamt-stat__label{font-size:.78rem;color:var(--gray-600);text-transform:uppercase;letter-spacing:.06em}
+.ehrenamt-detail-card{background:var(--white);border-radius:var(--radius-lg);padding:24px;margin-bottom:16px;box-shadow:var(--shadow-sm);border-left:4px solid var(--green-400)}
+.ehrenamt-detail-card--urgent{border-left-color:var(--red-600);background:var(--red-50)}
+.ehrenamt-detail-card__header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.ehrenamt-detail-card__title{font-family:var(--font-d);font-weight:700;font-size:1.05rem;text-transform:uppercase;color:var(--green-900)}
+.ehrenamt-detail-card__urgent-tag{font-family:var(--font-d);font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--white);background:var(--red-600);padding:3px 10px;border-radius:20px}
+.ehrenamt-detail-card__text{font-size:.88rem;color:var(--gray-600);line-height:1.6;margin-bottom:14px}
+.ehrenamt-detail-card__meta{display:flex;flex-wrap:wrap;gap:12px;font-size:.82rem;color:var(--gray-400)}
+.ehrenamt-detail-card__cta{display:inline-flex;margin-top:14px;font-family:var(--font-d);font-weight:700;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--white);background:var(--green-700);padding:10px 20px;border-radius:var(--radius)}
+.ehrenamt-detail-card--urgent .ehrenamt-detail-card__cta{background:var(--red-600)}
+
 /* ── News Detail Overlay ── */
 .news-detail-overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
 .news-detail-overlay.open{display:flex}
@@ -327,6 +377,7 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-st
       <div class="section__divider"></div>
     </div>
     <div class="news-grid" id="newsGrid"></div>
+    <div style="text-align:center;margin-top:20px"><a href="#aktuelles" onclick="openAktuelles();return false" style="font-family:var(--font-d);font-weight:600;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-700)">Alle Neuigkeiten ansehen →</a></div>
   </div>
 </section>
 
@@ -340,6 +391,7 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-st
       <p class="section__desc">Ein Verein lebt von seinen Ehrenamtlichen. Ob als Trainer, Betreuer, Platzwart oder Helfer bei Veranstaltungen — jede helfende Hand zählt. Hier seht ihr, wo wir aktuell Unterstützung suchen.</p>
     </div>
     <div class="volunteer-grid" id="volunteerGrid"></div>
+    <div style="text-align:center;margin-top:20px"><a href="#mitmachen" onclick="openMitmachen();return false" style="font-family:var(--font-d);font-weight:600;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-700)">Mehr erfahren & alle Positionen →</a></div>
   </div>
 </section>
 
@@ -493,6 +545,7 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-st
 
 <button class="back-to-top" id="backToTop" aria-label="Nach oben">↑</button>
 <div class="news-detail-overlay" id="newsOverlay"><article class="news-detail" id="newsDetail"></article></div>
+<div class="subpage-overlay" id="subpageOverlay"><div class="subpage" id="subpageContent"></div></div>
 
 <!-- ═══════════════════════════════════════════
      CMS — Daten werden aus content/*.json geladen
@@ -518,15 +571,15 @@ async function loadCMS() {
 
   CMS.meta = meta;
   CMS.urgentBanner = banner;
-  CMS.news = news;
+  CMS.news = Array.isArray(news) ? news : (news.items || news);
   CMS.teamsLastUpdated = teams.lastUpdated;
   CMS.teams = teams.teams;
   CMS.ehrenamtLastUpdated = ehrenamt.lastUpdated;
   CMS.ehrenamt = ehrenamt.positionen;
-  CMS.termine = termine;
-  CMS.ansprechpartner = ansprechpartner;
-  CMS.sponsoren = sponsoren;
-  CMS.downloads = downloads;
+  CMS.termine = Array.isArray(termine) ? termine : (termine.items || termine);
+  CMS.ansprechpartner = Array.isArray(ansprechpartner) ? ansprechpartner : (ansprechpartner.items || ansprechpartner);
+  CMS.sponsoren = Array.isArray(sponsoren) ? sponsoren : (sponsoren.items || sponsoren);
+  CMS.downloads = Array.isArray(downloads) ? downloads : (downloads.items || downloads);
   CMS.impressum = impressum;
   CMS.datenschutz = datenschutz;
 }
@@ -589,7 +642,7 @@ function renderTeams() {
   document.getElementById('teamsTimestamp').innerHTML = `Stand: ${fmt(CMS.teamsLastUpdated)}`;
   document.getElementById('teamsGrid').innerHTML = CMS.teams.map((t,i) => {
     const trainerWarning = t.trainer.includes('gesucht') ? ' style="color:var(--red-600);font-weight:600"' : '';
-    return `<div class="team-card fade-up stagger-${(i%6)+1}">
+    return `<div class="team-card fade-up stagger-${(i%6)+1}" style="cursor:pointer" onclick="openTeam('${t.slug}')">
       <div class="team-card__category">${catBadge(t.category)}</div>
       <div class="team-card__name">${t.name}</div>
       <div class="team-card__info">
@@ -709,9 +762,134 @@ function closeOverlay() {
 }
 document.getElementById('newsOverlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeOverlay()});
 
+function closeSubpage() {
+  document.getElementById('subpageOverlay').classList.remove('open');
+  document.body.style.overflow='';
+  history.pushState(null,'',window.location.pathname);
+}
+
+// ── Team Detail Page ──
+function openTeam(slug) {
+  const t = CMS.teams.find(x=>x.slug===slug); if(!t) return;
+  history.pushState(null,'',`#mannschaft/${slug}`);
+  const trainerHtml = t.trainer.includes('gesucht')
+    ? `<strong style="color:var(--red-600)">${t.trainer}</strong> <a href="mailto:${CMS.meta.email}?subject=Trainer ${t.name}" style="color:var(--red-600);font-size:.8rem">(Jetzt melden!)</a>`
+    : `<strong>${t.trainer}</strong>`;
+  document.getElementById('subpageContent').innerHTML = `
+    <button class="subpage__back" onclick="closeSubpage()">← Zurück zur Übersicht</button>
+    <span class="subpage__badge badge ${({Herren:'',Senioren:'badge--gold',Jugend:'badge--outline'})[t.category]||''}">${t.category}</span>
+    <h1 class="subpage__title">${t.name}</h1>
+    <div class="subpage__meta">
+      <div class="subpage__meta-item"><span class="icon">🏆</span> Liga: <strong>${t.liga}</strong></div>
+      <div class="subpage__meta-item"><span class="icon">👤</span> Trainer: ${trainerHtml}</div>
+      <div class="subpage__meta-item"><span class="icon">⏰</span> Training: <strong>${t.training}</strong></div>
+      <div class="subpage__meta-item"><span class="icon">📍</span> <strong>${t.ort}</strong></div>
+    </div>
+    <div class="subpage__body"><p>${t.beschreibung||''}</p></div>
+    ${t.fussballde ? `<a href="${t.fussballde}" target="_blank" class="subpage__fussballde">⚽ Auf fussball.de ansehen →</a>` : ''}
+    <div class="subpage__section">
+      <h3 class="subpage__section-title">Kader</h3>
+      ${t.kader && t.kader.length > 0
+        ? `<ul>${t.kader.map(k=>`<li>${k}</li>`).join('')}</ul>`
+        : `<p class="subpage__kader-hint">Der Kader wird in Kürze veröffentlicht. Für Infos: <a href="mailto:${CMS.meta.email}" style="color:var(--green-700)">${CMS.meta.email}</a></p>`
+      }
+    </div>
+    <div class="subpage__section">
+      <h3 class="subpage__section-title">Kontakt</h3>
+      <p style="font-size:.88rem;color:var(--gray-600)">Interesse mitzuspielen oder Fragen zum Training?<br>
+      Schreib uns: <a href="mailto:${CMS.meta.email}" style="color:var(--green-700);font-weight:600">${CMS.meta.email}</a></p>
+    </div>
+    <div class="timestamp" style="margin-top:24px">Stand: ${fmt(CMS.teamsLastUpdated)}</div>`;
+  document.getElementById('subpageOverlay').classList.add('open');
+  document.getElementById('subpageOverlay').scrollTop = 0;
+  document.body.style.overflow='hidden';
+}
+
+// ── Aktuelles Stream Page ──
+function openAktuelles() {
+  history.pushState(null,'',`#aktuelles`);
+  document.getElementById('subpageContent').innerHTML = `
+    <button class="subpage__back" onclick="closeSubpage()">← Zurück zur Startseite</button>
+    <span class="subpage__badge badge badge--outline" style="color:var(--green-700);border-color:var(--green-700)">Neuigkeiten</span>
+    <h1 class="subpage__title">Alle Aktuelles</h1>
+    <div class="news-stream">
+      ${CMS.news.map(n => `
+        <div class="news-stream-item" onclick="closeSubpage();setTimeout(()=>openNews('${n.id}'),100)">
+          ${n.image ? `<img class="news-stream-item__img" src="${n.image}" alt="${n.title}" loading="lazy">` : ''}
+          <div class="news-stream-item__body">
+            <div class="news-stream-item__date">${fmtL(n.date)}</div>
+            <div class="news-stream-item__title">${n.title}</div>
+            <div class="news-stream-item__excerpt">${n.excerpt}</div>
+          </div>
+        </div>
+      `).join('')}
+    </div>`;
+  document.getElementById('subpageOverlay').classList.add('open');
+  document.getElementById('subpageOverlay').scrollTop = 0;
+  document.body.style.overflow='hidden';
+}
+
+// ── Mitmachen / Ehrenamt Landing ──
+function openMitmachen() {
+  history.pushState(null,'',`#mitmachen`);
+  const urgent = CMS.ehrenamt.filter(e=>e.urgent);
+  const regular = CMS.ehrenamt.filter(e=>!e.urgent);
+  document.getElementById('subpageContent').innerHTML = `
+    <button class="subpage__back" onclick="closeSubpage()">← Zurück zur Startseite</button>
+    <div class="ehrenamt-hero">
+      <div class="ehrenamt-hero__title">Mitmachen & Ehrenamt</div>
+      <div class="ehrenamt-hero__text">Ein Verein lebt nicht nur von seinen Spielern — sondern von allen, die anpacken. Ob Trainer, Betreuer, Platzwart oder Helfer bei Veranstaltungen: Ohne Ehrenamt kein Fußball. Hier siehst du, wo wir aktuell Unterstützung brauchen.</div>
+    </div>
+    <div class="ehrenamt-stats">
+      <div class="ehrenamt-stat"><div class="ehrenamt-stat__num">${CMS.ehrenamt.length}</div><div class="ehrenamt-stat__label">Offene Positionen</div></div>
+      <div class="ehrenamt-stat"><div class="ehrenamt-stat__num">${urgent.length}</div><div class="ehrenamt-stat__label">Dringend gesucht</div></div>
+      <div class="ehrenamt-stat"><div class="ehrenamt-stat__num">${CMS.teams.length}</div><div class="ehrenamt-stat__label">Mannschaften</div></div>
+    </div>
+    ${urgent.length ? `<h2 style="font-family:var(--font-d);font-weight:700;font-size:1.1rem;text-transform:uppercase;color:var(--red-600);margin:28px 0 16px">Dringend gesucht</h2>` : ''}
+    ${urgent.map(v => `
+      <div class="ehrenamt-detail-card ehrenamt-detail-card--urgent">
+        <div class="ehrenamt-detail-card__header">
+          <div class="ehrenamt-detail-card__title">${v.title}</div>
+          <span class="ehrenamt-detail-card__urgent-tag">Dringend</span>
+        </div>
+        <div class="ehrenamt-detail-card__text">${v.text}</div>
+        <div class="ehrenamt-detail-card__meta"><span>⏰ ${v.aufwand}</span></div>
+        <a href="mailto:${v.kontakt}?subject=Ehrenamt: ${v.title}" class="ehrenamt-detail-card__cta">Jetzt melden →</a>
+      </div>
+    `).join('')}
+    ${regular.length ? `<h2 style="font-family:var(--font-d);font-weight:700;font-size:1.1rem;text-transform:uppercase;color:var(--green-900);margin:28px 0 16px">Weitere Positionen</h2>` : ''}
+    ${regular.map(v => `
+      <div class="ehrenamt-detail-card">
+        <div class="ehrenamt-detail-card__header">
+          <div class="ehrenamt-detail-card__title">${v.title}</div>
+        </div>
+        <div class="ehrenamt-detail-card__text">${v.text}</div>
+        <div class="ehrenamt-detail-card__meta"><span>⏰ ${v.aufwand}</span></div>
+        <a href="mailto:${v.kontakt}?subject=Ehrenamt: ${v.title}" class="ehrenamt-detail-card__cta">Meld dich! →</a>
+      </div>
+    `).join('')}
+    <div style="margin-top:32px;padding:24px;background:var(--green-50);border-radius:var(--radius-lg);border:1px solid var(--green-100)">
+      <h3 style="font-family:var(--font-d);font-weight:700;font-size:.95rem;text-transform:uppercase;color:var(--green-900);margin-bottom:8px">Was bringt mir ein Ehrenamt?</h3>
+      <ul style="font-size:.88rem;color:var(--gray-600);line-height:1.8;padding-left:20px">
+        <li>Gemeinschaft und Zusammenhalt im Verein</li>
+        <li>Ehrenamtspauschale bis zu 840 EUR/Jahr steuerfrei</li>
+        <li>Trainerschein-Ausbildung wird vom Verein unterstützt</li>
+        <li>Persönliche Weiterentwicklung und Verantwortung</li>
+        <li>Spaß am Fußball und an der Vereinsarbeit</li>
+      </ul>
+    </div>
+    <div class="timestamp" style="margin-top:24px">Stand: ${fmt(CMS.ehrenamtLastUpdated)}</div>`;
+  document.getElementById('subpageOverlay').classList.add('open');
+  document.getElementById('subpageOverlay').scrollTop = 0;
+  document.body.style.overflow='hidden';
+}
+
 function checkHash() {
   const h = window.location.hash;
   if(h.startsWith('#artikel/')) openNews(h.replace('#artikel/',''));
+  else if(h.startsWith('#mannschaft/')) openTeam(h.replace('#mannschaft/',''));
+  else if(h==='#aktuelles') openAktuelles();
+  else if(h==='#mitmachen') openMitmachen();
   else if(h==='#impressum') openLegal('impressum');
   else if(h==='#datenschutz') openLegal('datenschutz');
 }
