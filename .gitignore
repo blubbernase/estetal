@@ -1,0 +1,9 @@
+# Screenshots (dev only)
+sg-estetal-*.png
+*.output
+
+# Old mockup
+index-v1-backup.html
+
+# Playwright MCP logs
+.playwright-mcp/
