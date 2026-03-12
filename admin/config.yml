@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: NbaQK/estetal
+  repo: blubbernase/estetal
   branch: main
 
 media_folder: "images"
