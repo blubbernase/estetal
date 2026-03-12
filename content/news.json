@@ -1,26 +1,28 @@
-[
-  {
-    "id": "saison-2025-26",
-    "title": "Neue Saison 2025/26 — Wir freuen uns!",
-    "date": "2025-07-01",
-    "excerpt": "Hallo SGE-Fans, wir freuen uns auf eine neue und spannende Fußball Saison 2025/26.",
-    "body": "<p>Hallo SGE-Fans!</p><p>Wir freuen uns auf eine neue und spannende Fußball Saison 2025/26. Alle aktuellen Trainingszeiten findet ihr in der Mannschaftsübersicht.</p><p>Euer SGE-Vorstand</p>",
-    "image": "images/gallery-2.jpg"
-  },
-  {
-    "id": "led-flutlicht",
-    "title": "LED-Flutlicht erfolgreich umgerüstet",
-    "date": "2025-03-15",
-    "excerpt": "Die Umrüstung auf energieeffiziente LED-Beleuchtung ist abgeschlossen — gefördert durch die Klimaschutzinitiative.",
-    "body": "<p>Es ist vollbracht! Die erfolgreiche Umrüstung auf energieeffiziente LED Flutlicht Beleuchtung ist abgeschlossen.</p>",
-    "image": "images/flutlicht.jpg"
-  },
-  {
-    "id": "mitglieder-gesucht",
-    "title": "Spieler und Trainer gesucht!",
-    "date": "2025-06-01",
-    "excerpt": "Wir suchen für mehrere Mannschaften Verstärkung — Spieler und Trainer. Meldet euch!",
-    "body": "<p>Wir suchen für mehrere Mannschaften noch Verstärkung!</p><p>Meldet euch unter fussball@sg-estetal.de.</p>",
-    "image": "images/gallery-4.jpg"
-  }
-]
+{
+  "items": [
+    {
+      "id": "saison-2025-26",
+      "title": "Neue Saison 2025/26 — Wir freuen uns!",
+      "date": "2025-07-01",
+      "excerpt": "Hallo SGE-Fans, wir freuen uns auf eine neue und spannende Fußball Saison 2025/26.",
+      "body": "<p>Hallo SGE-Fans!</p><p>Wir freuen uns auf eine neue und spannende Fußball Saison 2025/26. Alle aktuellen Trainingszeiten findet ihr in der Mannschaftsübersicht.</p><p>Euer SGE-Vorstand</p>",
+      "image": "images/gallery-2.jpg"
+    },
+    {
+      "id": "led-flutlicht",
+      "title": "LED-Flutlicht erfolgreich umgerüstet",
+      "date": "2025-03-15",
+      "excerpt": "Die Umrüstung auf energieeffiziente LED-Beleuchtung ist abgeschlossen — gefördert durch die Klimaschutzinitiative.",
+      "body": "<p>Es ist vollbracht! Die erfolgreiche Umrüstung auf energieeffiziente LED Flutlicht Beleuchtung ist abgeschlossen.</p>",
+      "image": "images/flutlicht.jpg"
+    },
+    {
+      "id": "mitglieder-gesucht",
+      "title": "Spieler und Trainer gesucht!",
+      "date": "2025-06-01",
+      "excerpt": "Wir suchen für mehrere Mannschaften Verstärkung — Spieler und Trainer. Meldet euch!",
+      "body": "<p>Wir suchen für mehrere Mannschaften noch Verstärkung!</p><p>Meldet euch unter fussball@sg-estetal.de.</p>",
+      "image": "images/gallery-4.jpg"
+    }
+  ]
+}

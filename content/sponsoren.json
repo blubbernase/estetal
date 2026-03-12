@@ -1,3 +1,5 @@
-[
-  { "name": "Sponsor werden?", "url": "mailto:fussball@sg-estetal.de" }
-]
+{
+  "items": [
+    { "name": "Sponsor werden?", "url": "mailto:fussball@sg-estetal.de" }
+  ]
+}

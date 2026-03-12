@@ -518,15 +518,15 @@ async function loadCMS() {
 
   CMS.meta = meta;
   CMS.urgentBanner = banner;
-  CMS.news = news;
+  CMS.news = news.items;
   CMS.teamsLastUpdated = teams.lastUpdated;
   CMS.teams = teams.teams;
   CMS.ehrenamtLastUpdated = ehrenamt.lastUpdated;
   CMS.ehrenamt = ehrenamt.positionen;
-  CMS.termine = termine;
-  CMS.ansprechpartner = ansprechpartner;
-  CMS.sponsoren = sponsoren;
-  CMS.downloads = downloads;
+  CMS.termine = termine.items;
+  CMS.ansprechpartner = ansprechpartner.items;
+  CMS.sponsoren = sponsoren.items;
+  CMS.downloads = downloads.items;
   CMS.impressum = impressum;
   CMS.datenschutz = datenschutz;
 }
