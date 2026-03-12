@@ -2,7 +2,8 @@ backend:
   name: github
   repo: blubbernase/estetal
   branch: gh-pages
-  base_url: https://decap-oauth.netlify.app
+  auth_type: pkce
+  app_id: Ov23liCai4BqbUdFOL9f
 
 media_folder: "images"
 public_folder: "/images"
@@ -40,103 +41,107 @@ collections:
           - { name: "text", label: "Banner-Text (HTML erlaubt)", widget: "string" }
           - { name: "link", label: "Link-Ziel", widget: "string", required: false }
 
-  # ── Inhalte ──
-  - name: "content"
-    label: "Inhalte"
-    files:
-      - name: "news"
-        label: "News"
-        file: "content/news.json"
+  # ── News ──
+  - name: "news"
+    label: "News"
+    label_singular: "Artikel"
+    file: "content/news.json"
+    fields:
+      - name: "items"
+        label: "Artikel"
+        widget: "list"
         fields:
-          - name: "items"
-            label: "Artikel"
-            widget: "list"
-            fields:
-              - { name: "id", label: "URL-Slug", widget: "string", hint: "Keine Leerzeichen, z.B. saison-2025-26" }
-              - { name: "title", label: "Titel", widget: "string" }
-              - { name: "date", label: "Datum", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
-              - { name: "excerpt", label: "Kurztext", widget: "text" }
-              - { name: "body", label: "Volltext (HTML)", widget: "text" }
-              - { name: "image", label: "Bild", widget: "image", required: false }
+          - { name: "id", label: "URL-Slug", widget: "string", hint: "Keine Leerzeichen, z.B. saison-2025-26" }
+          - { name: "title", label: "Titel", widget: "string" }
+          - { name: "date", label: "Datum", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
+          - { name: "excerpt", label: "Kurztext", widget: "text" }
+          - { name: "body", label: "Volltext (HTML)", widget: "text" }
+          - { name: "image", label: "Bild", widget: "image", required: false }
 
+  # ── Mannschaften ──
+  - name: "teams"
+    label: "Mannschaften"
+    file: "content/teams.json"
+    fields:
+      - { name: "lastUpdated", label: "Zuletzt aktualisiert", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
       - name: "teams"
         label: "Mannschaften"
-        file: "content/teams.json"
+        widget: "list"
         fields:
-          - { name: "lastUpdated", label: "Zuletzt aktualisiert", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
-          - name: "teams"
-            label: "Mannschaften"
-            widget: "list"
-            fields:
-              - { name: "name", label: "Name", widget: "string" }
-              - { name: "category", label: "Kategorie", widget: "select", options: ["Herren", "Senioren", "Jugend"] }
-              - { name: "liga", label: "Liga / Spielklasse", widget: "string" }
-              - { name: "trainer", label: "Trainer", widget: "string" }
-              - { name: "training", label: "Trainingszeiten", widget: "string" }
-              - { name: "ort", label: "Trainingsort", widget: "string" }
+          - { name: "name", label: "Name", widget: "string" }
+          - { name: "category", label: "Kategorie", widget: "select", options: ["Herren", "Senioren", "Jugend"] }
+          - { name: "liga", label: "Liga / Spielklasse", widget: "string" }
+          - { name: "trainer", label: "Trainer", widget: "string" }
+          - { name: "training", label: "Trainingszeiten", widget: "string" }
+          - { name: "ort", label: "Trainingsort", widget: "string" }
 
-      - name: "ehrenamt"
-        label: "Ehrenamt"
-        file: "content/ehrenamt.json"
+  # ── Ehrenamt ──
+  - name: "ehrenamt"
+    label: "Ehrenamt"
+    file: "content/ehrenamt.json"
+    fields:
+      - { name: "lastUpdated", label: "Zuletzt aktualisiert", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
+      - name: "positionen"
+        label: "Offene Positionen"
+        widget: "list"
         fields:
-          - { name: "lastUpdated", label: "Zuletzt aktualisiert", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
-          - name: "positionen"
-            label: "Offene Positionen"
-            widget: "list"
-            fields:
-              - { name: "title", label: "Position", widget: "string" }
-              - { name: "urgent", label: "Dringend?", widget: "boolean", default: false }
-              - { name: "text", label: "Beschreibung", widget: "text" }
-              - { name: "aufwand", label: "Zeitaufwand", widget: "string" }
-              - { name: "kontakt", label: "Kontakt-E-Mail", widget: "string" }
+          - { name: "title", label: "Position", widget: "string" }
+          - { name: "urgent", label: "Dringend?", widget: "boolean", default: false }
+          - { name: "text", label: "Beschreibung", widget: "text" }
+          - { name: "aufwand", label: "Zeitaufwand", widget: "string" }
+          - { name: "kontakt", label: "Kontakt-E-Mail", widget: "string" }
 
-      - name: "termine"
+  # ── Termine ──
+  - name: "termine"
+    label: "Termine"
+    file: "content/termine.json"
+    fields:
+      - name: "items"
         label: "Termine"
-        file: "content/termine.json"
+        widget: "list"
         fields:
-          - name: "items"
-            label: "Termine"
-            widget: "list"
-            fields:
-              - { name: "date", label: "Datum", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
-              - { name: "title", label: "Titel", widget: "string" }
-              - { name: "detail", label: "Details", widget: "string" }
+          - { name: "date", label: "Datum", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD.MM.YYYY", time_format: false }
+          - { name: "title", label: "Titel", widget: "string" }
+          - { name: "detail", label: "Details", widget: "string" }
 
-      - name: "ansprechpartner"
-        label: "Ansprechpartner"
-        file: "content/ansprechpartner.json"
+  # ── Ansprechpartner ──
+  - name: "ansprechpartner"
+    label: "Ansprechpartner"
+    file: "content/ansprechpartner.json"
+    fields:
+      - name: "items"
+        label: "Kontakte"
+        widget: "list"
         fields:
-          - name: "items"
-            label: "Kontakte"
-            widget: "list"
-            fields:
-              - { name: "rolle", label: "Rolle / Position", widget: "string" }
-              - { name: "name", label: "Name", widget: "string" }
-              - { name: "email", label: "E-Mail", widget: "string" }
-              - { name: "icon", label: "Icon (Emoji)", widget: "string", hint: "z.B. 👔 ⚽ 🏆 🤝 🌱 📱" }
+          - { name: "rolle", label: "Rolle / Position", widget: "string" }
+          - { name: "name", label: "Name", widget: "string" }
+          - { name: "email", label: "E-Mail", widget: "string" }
+          - { name: "icon", label: "Icon (Emoji)", widget: "string", hint: "z.B. 👔 ⚽ 🏆 🤝 🌱 📱" }
 
-      - name: "sponsoren"
+  # ── Sponsoren ──
+  - name: "sponsoren"
+    label: "Sponsoren"
+    file: "content/sponsoren.json"
+    fields:
+      - name: "items"
         label: "Sponsoren"
-        file: "content/sponsoren.json"
+        widget: "list"
         fields:
-          - name: "items"
-            label: "Sponsoren"
-            widget: "list"
-            fields:
-              - { name: "name", label: "Name", widget: "string" }
-              - { name: "url", label: "Website / Link", widget: "string" }
+          - { name: "name", label: "Name", widget: "string" }
+          - { name: "url", label: "Website / Link", widget: "string" }
 
-      - name: "downloads"
-        label: "Downloads"
-        file: "content/downloads.json"
+  # ── Downloads ──
+  - name: "downloads"
+    label: "Downloads"
+    file: "content/downloads.json"
+    fields:
+      - name: "items"
+        label: "Dokumente"
+        widget: "list"
         fields:
-          - name: "items"
-            label: "Dokumente"
-            widget: "list"
-            fields:
-              - { name: "name", label: "Bezeichnung", widget: "string" }
-              - { name: "url", label: "Datei-URL", widget: "string" }
-              - { name: "typ", label: "Dateityp", widget: "string", default: "PDF" }
+          - { name: "name", label: "Bezeichnung", widget: "string" }
+          - { name: "url", label: "Datei-URL", widget: "string" }
+          - { name: "typ", label: "Dateityp", widget: "string", default: "PDF" }
 
   # ── Rechtstexte ──
   - name: "legal"

@@ -1,8 +1,6 @@
-{
-  "items": [
-    { "name": "Aufnahmeantrag SV Trelde", "url": "https://www.sg-estetal.com/_files/ugd/56b94c_212e74f90bad4e27a35a8903f634aa0f.pdf", "typ": "PDF" },
-    { "name": "Satzung des Vereins", "url": "#", "typ": "PDF" },
-    { "name": "Datenschutzhinweise Mitglieder", "url": "#", "typ": "PDF" },
-    { "name": "Einwilligung Fotorechte (Jugend)", "url": "#", "typ": "PDF" }
-  ]
-}
+[
+  { "name": "Aufnahmeantrag SV Trelde", "url": "https://www.sg-estetal.com/_files/ugd/56b94c_212e74f90bad4e27a35a8903f634aa0f.pdf", "typ": "PDF" },
+  { "name": "Satzung des Vereins", "url": "#", "typ": "PDF" },
+  { "name": "Datenschutzhinweise Mitglieder", "url": "#", "typ": "PDF" },
+  { "name": "Einwilligung Fotorechte (Jugend)", "url": "#", "typ": "PDF" }
+]
