@@ -21,7 +21,7 @@ body{font-family:var(--font-b);color:var(--gray-700);background:var(--white);
      -webkit-print-color-adjust:exact;print-color-adjust:exact}
 .page{width:210mm;height:297mm;display:flex;flex-direction:column;overflow:hidden}
 
-header{background:var(--green-900);color:var(--white);padding:12mm 14mm 9mm;position:relative}
+header{background:var(--green-900);color:var(--white);padding:10mm 14mm 7.5mm;position:relative}
 header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2.2mm;
   background:linear-gradient(90deg,var(--gold) 0%,var(--gold-light) 100%)}
 .kicker{font-family:var(--font-d);font-weight:700;font-size:11pt;letter-spacing:.22em;
@@ -29,8 +29,8 @@ header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2.2mm;
 h1{font-family:var(--font-d);font-weight:800;font-size:34pt;line-height:.95;letter-spacing:-.01em}
 .sub{font-size:10pt;font-weight:400;color:#CFE3CF;margin-top:3mm;max-width:130mm;line-height:1.45}
 
-main{flex:1;padding:10mm 14mm 0}
-.steps{display:flex;flex-direction:column;gap:5.2mm}
+main{flex:1;padding:8mm 14mm 0}
+.steps{display:flex;flex-direction:column;gap:4.3mm}
 .step{display:flex;gap:5mm;align-items:flex-start}
 .num{flex:0 0 11mm;height:11mm;border-radius:50%;background:var(--green-700);color:var(--white);
   font-family:var(--font-d);font-weight:800;font-size:17pt;display:flex;align-items:center;
@@ -43,19 +43,21 @@ main{flex:1;padding:10mm 14mm 0}
 code{font-family:var(--font-b);font-weight:600;background:var(--cream-dark);
   color:var(--green-800);padding:.4mm 1.6mm;border-radius:1mm;font-size:9.4pt}
 
-.note{margin-top:7mm;background:var(--cream);border-left:2.2mm solid var(--gold);
-  padding:4.5mm 5mm;font-size:9.5pt;line-height:1.5}
+.note+.note{margin-top:3mm}
+.note{margin-top:5mm;background:var(--cream);border-left:2.2mm solid var(--gold);
+  padding:4mm 5mm;font-size:9.4pt;line-height:1.45}
 .note b{font-weight:600;color:var(--green-900)}
+.note-alt{background:#F1F6F1;border-left-color:var(--green-600)}
 
-.glossar{margin-top:7mm}
+.glossar{margin-top:5mm}
 .glossar h3{font-family:var(--font-d);font-weight:700;font-size:13pt;color:var(--green-900);
   letter-spacing:.03em;margin-bottom:3mm;padding-bottom:1.5mm;border-bottom:.4mm solid var(--cream-dark)}
-.gl{display:grid;grid-template-columns:1fr 1fr;gap:1.8mm 9mm}
+.gl{display:grid;grid-template-columns:1fr 1fr;gap:1.5mm 9mm}
 .gl div{font-size:9.2pt;line-height:1.35;display:flex;gap:2mm}
 .gl span{font-weight:600;color:var(--green-800);flex:0 0 27mm}
 .gl em{font-style:normal;color:var(--gray-600)}
 
-footer{margin-top:auto;background:var(--cream-dark);padding:5mm 14mm;
+footer{margin-top:auto;background:var(--cream-dark);padding:4.5mm 14mm;
   display:flex;justify-content:space-between;align-items:center;font-size:8.6pt;color:var(--gray-600)}
 footer b{font-family:var(--font-d);font-weight:700;font-size:11pt;color:var(--green-900);letter-spacing:.02em}
 </style>
@@ -66,8 +68,8 @@ footer b{font-family:var(--font-d);font-weight:700;font-size:11pt;color:var(--gr
 <header>
   <div class="kicker">SG Estetal &middot; Redaktion</div>
   <h1>Website pflegen<br>in fünf Schritten</h1>
-  <p class="sub">Du brauchst kein GitHub-Konto und musst nichts installieren — nur einen Browser.
-  Die Oberfläche ist auf Englisch, die Eingabefelder sind auf Deutsch. Das Glossar unten erklärt die wichtigsten Wörter.</p>
+  <p class="sub">So pflegst du News, Mannschaften, Termine und alle weiteren Inhalte
+  der Website selbst.</p>
 </header>
 
 <main>
@@ -76,24 +78,27 @@ footer b{font-family:var(--font-d);font-weight:700;font-size:11pt;color:var(--gr
     <div class="step">
       <div class="num">1</div>
       <div class="step-body">
-        <h2>Einladung abwarten</h2>
-        <p>Du bekommst eine E-Mail mit einer Einladung zum Redaktionssystem. Merke dir, an welche Adresse sie ging — genau diese brauchst du gleich.</p>
+        <h2>Einladung in der E-Mail</h2>
+        <p>Du bekommst eine E-Mail mit dem Betreff <code>Join &bdquo;blubbernase/estetal&ldquo; on Pages CMS</code>.
+        <b>blubbernase</b> ist der Benutzername von Nelson Baptista — die Einladung ist also echt.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="num">2</div>
       <div class="step-body">
-        <h2>Anmelden</h2>
-        <p>Öffne <code>app.pagescms.org</code> und registriere dich mit <b>genau der E-Mail-Adresse</b>, an die die Einladung ging. Eine andere Adresse funktioniert nicht.</p>
+        <h2>Auf den Link klicken</h2>
+        <p>In der E-Mail auf <code>Join &bdquo;blubbernase/estetal&ldquo;</code> klicken. Falls der Link nicht funktioniert:
+        die darunter stehende Adresse kopieren und in den Browser einfügen.</p>
       </div>
     </div>
 
     <div class="step">
       <div class="num">3</div>
       <div class="step-body">
-        <h2>Projekt „estetal“ auswählen</h2>
-        <p>Nach der Anmeldung siehst du das Projekt <b>estetal</b>. Klick es an. Falls nach einem Branch gefragt wird, wähle <code>main</code>.</p>
+        <h2>Code bestätigen</h2>
+        <p>Anschließend wird ein <b>Code an deine E-Mail-Adresse</b> geschickt. Diesen Code eintragen — fertig.
+        Ein Passwort brauchst du nicht. Danach siehst du das Projekt <b>estetal</b>.</p>
       </div>
     </div>
 
@@ -115,6 +120,11 @@ footer b{font-family:var(--font-d);font-weight:700;font-size:11pt;color:var(--gr
 
   </div>
 
+  <div class="note note-alt">
+    <b>Layout, Farben oder neue Bereiche?</b> Alles, was über das Pflegen von Inhalten hinausgeht,
+    macht <b>Nelson Baptista</b> — sprich ihn einfach an.
+  </div>
+
   <div class="note">
     <b>Keine Angst vor Fehlern.</b> Jede Änderung wird gespeichert und lässt sich zurückholen —
     es kann nichts endgültig kaputtgehen. Im Zweifel lieber speichern und nachfragen als gar nicht trauen.
@@ -131,7 +141,6 @@ footer b{font-family:var(--font-d);font-weight:700;font-size:11pt;color:var(--gr
       <div><span>Search</span><em>Suchen</em></div>
       <div><span>History</span><em>Änderungsverlauf</em></div>
       <div><span>Cancel</span><em>Abbrechen</em></div>
-      <div><span>Collaborators</span><em>Weitere Redakteure</em></div>
       <div><span>Sign in / out</span><em>Anmelden / Abmelden</em></div>
     </div>
   </div>
