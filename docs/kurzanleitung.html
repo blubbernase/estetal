@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>SG Estetal — Kurzanleitung Redaktion</title>
+<style>
+@font-face{font-family:'Barlow Condensed';font-weight:700;src:url('../fonts/barlow-700.ttf') format('truetype')}
+@font-face{font-family:'Barlow Condensed';font-weight:800;src:url('../fonts/barlow-800.ttf') format('truetype')}
+@font-face{font-family:'Libre Franklin';font-weight:400;src:url('../fonts/libre-400.ttf') format('truetype')}
+@font-face{font-family:'Libre Franklin';font-weight:600;src:url('../fonts/libre-600.ttf') format('truetype')}
+:root{
+  --green-900:#0D3B0F; --green-800:#14511A; --green-700:#1B5E20; --green-600:#2E7D32;
+  --gold:#C8A94E; --gold-light:#E8D48B; --cream:#FAFAF5; --cream-dark:#F0F0E8;
+  --bark:#3E2723; --gray-700:#333; --gray-600:#555; --white:#fff;
+  --font-d:'Barlow Condensed','Arial Narrow',sans-serif;
+  --font-b:'Libre Franklin','Helvetica Neue',sans-serif;
+}
+@page{size:A4;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-b);color:var(--gray-700);background:var(--white);
+     -webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;display:flex;flex-direction:column;overflow:hidden}
+
+header{background:var(--green-900);color:var(--white);padding:12mm 14mm 9mm;position:relative}
+header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2.2mm;
+  background:linear-gradient(90deg,var(--gold) 0%,var(--gold-light) 100%)}
+.kicker{font-family:var(--font-d);font-weight:700;font-size:11pt;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--gold-light);margin-bottom:2mm}
+h1{font-family:var(--font-d);font-weight:800;font-size:34pt;line-height:.95;letter-spacing:-.01em}
+.sub{font-size:10pt;font-weight:400;color:#CFE3CF;margin-top:3mm;max-width:130mm;line-height:1.45}
+
+main{flex:1;padding:10mm 14mm 0}
+.steps{display:flex;flex-direction:column;gap:5.2mm}
+.step{display:flex;gap:5mm;align-items:flex-start}
+.num{flex:0 0 11mm;height:11mm;border-radius:50%;background:var(--green-700);color:var(--white);
+  font-family:var(--font-d);font-weight:800;font-size:17pt;display:flex;align-items:center;
+  justify-content:center;line-height:1}
+.step-body{padding-top:.6mm}
+.step h2{font-family:var(--font-d);font-weight:700;font-size:15.5pt;color:var(--green-900);
+  line-height:1.1;margin-bottom:1.2mm}
+.step p{font-size:9.7pt;line-height:1.5;color:var(--gray-600);max-width:150mm}
+.step p b{color:var(--gray-700);font-weight:600}
+code{font-family:var(--font-b);font-weight:600;background:var(--cream-dark);
+  color:var(--green-800);padding:.4mm 1.6mm;border-radius:1mm;font-size:9.4pt}
+
+.note{margin-top:7mm;background:var(--cream);border-left:2.2mm solid var(--gold);
+  padding:4.5mm 5mm;font-size:9.5pt;line-height:1.5}
+.note b{font-weight:600;color:var(--green-900)}
+
+.glossar{margin-top:7mm}
+.glossar h3{font-family:var(--font-d);font-weight:700;font-size:13pt;color:var(--green-900);
+  letter-spacing:.03em;margin-bottom:3mm;padding-bottom:1.5mm;border-bottom:.4mm solid var(--cream-dark)}
+.gl{display:grid;grid-template-columns:1fr 1fr;gap:1.8mm 9mm}
+.gl div{font-size:9.2pt;line-height:1.35;display:flex;gap:2mm}
+.gl span{font-weight:600;color:var(--green-800);flex:0 0 27mm}
+.gl em{font-style:normal;color:var(--gray-600)}
+
+footer{margin-top:auto;background:var(--cream-dark);padding:5mm 14mm;
+  display:flex;justify-content:space-between;align-items:center;font-size:8.6pt;color:var(--gray-600)}
+footer b{font-family:var(--font-d);font-weight:700;font-size:11pt;color:var(--green-900);letter-spacing:.02em}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="kicker">SG Estetal &middot; Redaktion</div>
+  <h1>Website pflegen<br>in fünf Schritten</h1>
+  <p class="sub">Du brauchst kein GitHub-Konto und musst nichts installieren — nur einen Browser.
+  Die Oberfläche ist auf Englisch, die Eingabefelder sind auf Deutsch. Das Glossar unten erklärt die wichtigsten Wörter.</p>
+</header>
+
+<main>
+  <div class="steps">
+
+    <div class="step">
+      <div class="num">1</div>
+      <div class="step-body">
+        <h2>Einladung abwarten</h2>
+        <p>Du bekommst eine E-Mail mit einer Einladung zum Redaktionssystem. Merke dir, an welche Adresse sie ging — genau diese brauchst du gleich.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">2</div>
+      <div class="step-body">
+        <h2>Anmelden</h2>
+        <p>Öffne <code>app.pagescms.org</code> und registriere dich mit <b>genau der E-Mail-Adresse</b>, an die die Einladung ging. Eine andere Adresse funktioniert nicht.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">3</div>
+      <div class="step-body">
+        <h2>Projekt „estetal“ auswählen</h2>
+        <p>Nach der Anmeldung siehst du das Projekt <b>estetal</b>. Klick es an. Falls nach einem Branch gefragt wird, wähle <code>main</code>.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">4</div>
+      <div class="step-body">
+        <h2>Inhalt bearbeiten</h2>
+        <p>Links in der Leiste stehen alle Bereiche: <b>News, Mannschaften, Termine, Ehrenamt</b> und so weiter. Klick den Bereich an, den du pflegen willst. Zum Ändern einfach in die Felder schreiben — für einen neuen Eintrag nach unten scrollen und <code>Add an item</code> klicken.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div class="num">5</div>
+      <div class="step-body">
+        <h2>Speichern</h2>
+        <p>Oben rechts auf <code>Save</code> klicken. Fertig. Die Änderung steht nach etwa einer Minute auf <b>sg-estetal.de</b> — Seite ggf. neu laden.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="note">
+    <b>Keine Angst vor Fehlern.</b> Jede Änderung wird gespeichert und lässt sich zurückholen —
+    es kann nichts endgültig kaputtgehen. Im Zweifel lieber speichern und nachfragen als gar nicht trauen.
+  </div>
+
+  <div class="glossar">
+    <h3>Englische Wörter, die dir begegnen</h3>
+    <div class="gl">
+      <div><span>Save</span><em>Speichern</em></div>
+      <div><span>Add an item</span><em>Eintrag hinzufügen</em></div>
+      <div><span>Media</span><em>Bilder und Dateien</em></div>
+      <div><span>Upload</span><em>Datei hochladen</em></div>
+      <div><span>Delete</span><em>Löschen</em></div>
+      <div><span>Search</span><em>Suchen</em></div>
+      <div><span>History</span><em>Änderungsverlauf</em></div>
+      <div><span>Cancel</span><em>Abbrechen</em></div>
+      <div><span>Collaborators</span><em>Weitere Redakteure</em></div>
+      <div><span>Sign in / out</span><em>Anmelden / Abmelden</em></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <b>SG ESTETAL</b>
+  <div>Fragen? <b style="font-family:var(--font-b);font-size:8.6pt;font-weight:600">fussball@sg-estetal.de</b></div>
+</footer>
+
+</div>
+</body>
+</html>
