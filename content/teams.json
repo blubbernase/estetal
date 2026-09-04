@@ -1,15 +1,169 @@
 {
-  "lastUpdated": "2025-07-15",
+  "lastUpdated": "2026-08-20",
   "teams": [
-    { "name": "Erste Herren", "slug": "erste-herren", "category": "Herren", "liga": "Kreisliga Harburg", "trainer": "Wird bekannt gegeben", "training": "Di & Do, 19:00–20:30", "ort": "Sportplatz Trelde", "fussballde": "https://www.fussball.de/mannschaft/sg-estetal-nfv-harburg-herren-kreisliga-harburg-st-b/-/saison/2526/team-id/011MIF8NTS000000VTVG0001VTR8C1K7", "beschreibung": "Unsere erste Herrenmannschaft spielt in der Kreisliga Harburg und ist das Aushängeschild der SG Estetal. Spieltag ist in der Regel am Sonntag.", "kader": [] },
-    { "name": "Zweite Herren", "slug": "zweite-herren", "category": "Herren", "liga": "Kreisklasse Harburg", "trainer": "Wird bekannt gegeben", "training": "Di & Do, 19:00–20:30", "ort": "Sportplatz Trelde", "fussballde": "https://www.fussball.de/mannschaft/sg-estetal-ii-nfv-harburg-herren-kreisklasse-harburg/-/saison/2526/team-id/011MIF8O2O000000VTVG0001VTR8C1K7", "beschreibung": "Die Zweite Herren spielt in der Kreisklasse Harburg. Hier stehen Spaß am Fußball und Zusammenhalt im Vordergrund.", "kader": [] },
-    { "name": "Ü32 Senioren", "slug": "ue32-senioren", "category": "Senioren", "liga": "Altherren Kreisliga", "trainer": "Wird bekannt gegeben", "training": "Mi, 19:30–21:00", "ort": "Sportplatz Trelde", "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I", "beschreibung": "Unsere Ü32 — für alle, die nach der aktiven Karriere noch nicht aufhören wollen.", "kader": [] },
-    { "name": "Ü40 Senioren", "slug": "ue40-senioren", "category": "Senioren", "liga": "Altherren Kreisliga", "trainer": "Wird bekannt gegeben", "training": "Mi, 19:30–21:00", "ort": "Sportplatz Trelde", "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I", "beschreibung": "Die Ü40 — Erfahrung trifft auf Leidenschaft. Mittwochabend auf dem Platz.", "kader": [] },
-    { "name": "U19 Junioren", "slug": "u19", "category": "Jugend", "liga": "Kreisliga", "trainer": "Wird bekannt gegeben", "training": "Di & Do, 17:30–19:00", "ort": "Sportplatz Trelde", "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I", "beschreibung": "Die A-Jugend — der Übergang in den Herrenbereich. Ambitioniertes Training auf Kreisliga-Niveau.", "kader": [] },
-    { "name": "U13", "slug": "u13", "category": "Jugend", "liga": "Kreisliga", "trainer": "Wird bekannt gegeben", "training": "Mo & Mi, 17:00–18:30", "ort": "Sportplatz Trelde", "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I", "beschreibung": "Im D-Jugend-Bereich wird die technische und taktische Ausbildung intensiviert.", "kader": [] },
-    { "name": "U12", "slug": "u12", "category": "Jugend", "liga": "Kreisliga", "trainer": "Wird bekannt gegeben", "training": "Mo & Mi, 17:00–18:30", "ort": "Sportplatz Trelde", "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I", "beschreibung": "Übergang vom Kinderfußball zum Jugendfußball — erste taktische Grundlagen.", "kader": [] },
-    { "name": "U9 + U10", "slug": "u9-u10", "category": "Jugend", "liga": "Kinderfußball", "trainer": "Wird bekannt gegeben", "training": "Fr, 16:00–17:30", "ort": "Sportplatz Trelde", "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I", "beschreibung": "Spielerisch Fußball lernen — Spaß und Bewegung stehen an erster Stelle.", "kader": [] },
-    { "name": "U8", "slug": "u8", "category": "Jugend", "liga": "Kinderfußball", "trainer": "Trainer gesucht!", "training": "Fr, 16:00–17:30", "ort": "Sportplatz Trelde", "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I", "beschreibung": "Unsere kleinen Kicker — wir suchen noch einen Trainer! Meld dich unter fussball@sg-estetal.de.", "kader": [] },
-    { "name": "U7 Bambini", "slug": "u7", "category": "Jugend", "liga": "Bambini", "trainer": "Trainer gesucht!", "training": "Fr, 15:00–16:00", "ort": "Sportplatz Trelde", "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I", "beschreibung": "Die Jüngsten im Verein — hier geht es um Spaß, Bewegung und erste Ballkontakte.", "kader": [] }
+    {
+      "name": "Erste Herren",
+      "slug": "erste-herren",
+      "category": "Herren",
+      "jahrgang": "",
+      "liga": "Bezirksliga",
+      "trainer": "Norman Scheepker",
+      "kontakt": [
+        "norman.scheepker@sg-estetal.de"
+      ],
+      "training": "Di & Do, 19:30 Uhr",
+      "ort": "Sportplatz Kakenstorf",
+      "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I",
+      "beschreibung": "Unsere erste Herrenmannschaft spielt in der Bezirksliga und ist das Aushängeschild der SG Estetal. Spieltag ist in der Regel am Sonntag.",
+      "kader": []
+    },
+    {
+      "name": "Zweite Herren",
+      "slug": "zweite-herren",
+      "category": "Herren",
+      "jahrgang": "",
+      "liga": "Kreisklasse Harburg",
+      "trainer": "Isa Buzhala",
+      "kontakt": [
+        "isa.buzhala@sg-estetal.de"
+      ],
+      "training": "Di & Do, 19:30 Uhr",
+      "ort": "Sportplatz Trelde",
+      "fussballde": "https://www.fussball.de/mannschaft/sg-estetal-ii-nfv-harburg-herren-kreisklasse-harburg/-/saison/2526/team-id/011MIF8O2O000000VTVG0001VTR8C1K7",
+      "beschreibung": "Die Zweite Herren spielt in der Kreisklasse Harburg. Hier stehen Spaß am Fußball und Zusammenhalt im Vordergrund.",
+      "kader": []
+    },
+    {
+      "name": "Ü32 Senioren",
+      "slug": "ue32-senioren",
+      "category": "Senioren",
+      "jahrgang": "",
+      "liga": "Altherren Kreisliga",
+      "trainer": "Hauke Tensfeldt, Sebastian Völcker",
+      "kontakt": [
+        "0174 / 9121718",
+        "0171 / 2379447"
+      ],
+      "training": "Mi & Fr, 19:30 Uhr",
+      "ort": "Sportplatz Trelde",
+      "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I",
+      "beschreibung": "Unsere Ü32 — für alle, die nach der aktiven Karriere noch nicht aufhören wollen.",
+      "kader": []
+    },
+    {
+      "name": "Ü50 Senioren",
+      "slug": "ue50-senioren",
+      "category": "Senioren",
+      "jahrgang": "",
+      "liga": "kein Ligabetrieb",
+      "trainer": "Sebastian Zekert",
+      "kontakt": [
+        "0176 / 49612036"
+      ],
+      "training": "Mi, 19:00 Uhr",
+      "ort": "Sportplatz Sprötze",
+      "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I",
+      "beschreibung": "Die Ü50 trifft sich mittwochs in Sprötze — ohne Ligabetrieb, dafür mit umso mehr Spaß am Spiel.",
+      "kader": []
+    },
+    {
+      "name": "U14",
+      "slug": "u14",
+      "category": "Jugend",
+      "jahrgang": "2012 / 2013",
+      "liga": "Kreisliga",
+      "trainer": "Jan Hendrik Glade",
+      "kontakt": [
+        "0171 / 1279672"
+      ],
+      "training": "Di ab 16:30 (Trelde) & Do ab 16:30 (TV Welle)",
+      "ort": "Sportplatz Trelde / TV Welle",
+      "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I",
+      "beschreibung": "Im C-Jugend-Bereich wird die technische und taktische Ausbildung intensiviert. Trainiert wird an zwei Standorten.",
+      "kader": []
+    },
+    {
+      "name": "U12",
+      "slug": "u12",
+      "category": "Jugend",
+      "jahrgang": "2014 / 2015",
+      "liga": "Kreisliga",
+      "trainer": "Nils Deppe, Jonathan Foth",
+      "kontakt": [
+        "0176 / 31021812",
+        "0151 / 61893080"
+      ],
+      "training": "Di & Do, 17:30 Uhr",
+      "ort": "Sportplatz Sprötze",
+      "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I",
+      "beschreibung": "Übergang vom Kinderfußball zum Jugendfußball — erste taktische Grundlagen.",
+      "kader": []
+    },
+    {
+      "name": "U11 / U10",
+      "slug": "u11-u10",
+      "category": "Jugend",
+      "jahrgang": "2016 / 2017",
+      "liga": "Kinderfußball",
+      "trainer": "Niklas Steffen, Tim Erke, Benjamin Schattat, Fabio Nißle",
+      "kontakt": [
+        "0176 / 56550733"
+      ],
+      "training": "Di 17:30 & Fr 17:00 Uhr",
+      "ort": "Sportplatz Sprötze",
+      "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I",
+      "beschreibung": "Spielerisch Fußball lernen — Spaß und Bewegung stehen an erster Stelle.",
+      "kader": []
+    },
+    {
+      "name": "U09",
+      "slug": "u09",
+      "category": "Jugend",
+      "jahrgang": "2018",
+      "liga": "Kinderfußball",
+      "trainer": "Ole Stephan, Broer Broers",
+      "kontakt": [
+        "0174 / 5244621"
+      ],
+      "training": "Fr, 17:00 Uhr",
+      "ort": "Sportplatz Sprötze",
+      "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I",
+      "beschreibung": "Erste Schritte im Kinderfußball — freitags in Sprötze.",
+      "kader": []
+    },
+    {
+      "name": "U08",
+      "slug": "u08",
+      "category": "Jugend",
+      "jahrgang": "2019",
+      "liga": "Kinderfußball",
+      "trainer": "Tim Erke, Benjamin Schattat",
+      "kontakt": [
+        "0176 / 99984762"
+      ],
+      "training": "Di 16:30 & Fr 17:00 Uhr",
+      "ort": "Sportplatz Sprötze",
+      "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I",
+      "beschreibung": "Unsere kleinen Kicker trainieren zweimal die Woche in Sprötze.",
+      "kader": []
+    },
+    {
+      "name": "U07 & U06",
+      "slug": "u07-u06",
+      "category": "Jugend",
+      "jahrgang": "2020 / 2021",
+      "liga": "Kinderfußball",
+      "trainer": "David Huthmacher, Eike, Jan Kammann",
+      "kontakt": [
+        "0174 / 4115195",
+        "0172 / 6539306",
+        "0177 / 4982597"
+      ],
+      "training": "Fr, 16:00 Uhr",
+      "ort": "Sportplatz Sprötze",
+      "fussballde": "https://www.fussball.de/verein/sg-estetal-niedersachsen/-/id/00ES8GN7RK00006IVV0AG08LVUPGND5I",
+      "beschreibung": "Die Jüngsten im Verein — hier geht es um Spaß, Bewegung und erste Ballkontakte.",
+      "kader": []
+    }
   ]
 }

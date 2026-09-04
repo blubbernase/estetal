@@ -7,3 +7,9 @@ index-v1-backup.html
 
 # Playwright MCP logs
 .playwright-mcp/
+
+# Local source archives and release checks
+backup-old-webseite/
+*Mannschaftsdaten*.csv
+trainer-abfrage-whatsapp.md
+.release-check/

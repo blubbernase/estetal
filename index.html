@@ -4,8 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SG Estetal — Vereint sind wir stärker</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<meta name="description" content="SG Estetal: Mannschaften, Trainingszeiten, Trainerkontakte und Neuigkeiten. Fußball im Estetal – von den Bambini bis zu den Senioren.">
+<link rel="icon" href="images/logo-sge.png" type="image/png">
+<link rel="stylesheet" href="fonts/fonts.css">
 <style>
 :root {
   --green-900: #0D3B0F; --green-800: #14511A; --green-700: #1B5E20;
@@ -23,7 +24,7 @@
   --radius: 6px; --radius-lg: 12px;
   --font-d: 'Barlow Condensed','Arial Narrow',sans-serif;
   --font-b: 'Libre Franklin','Helvetica Neue',sans-serif;
-  --mock-h: 34px;
+  --mock-h: 0px;
   --hdr: 64px;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -52,6 +53,7 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-st
 }
 .hamburger{background:none;border:none;cursor:pointer;width:36px;height:36px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;padding:0}
 .hamburger span{display:block;width:22px;height:2px;background:var(--white);border-radius:2px;transition:all .3s}
+@media(min-width:769px){.hamburger{display:none}}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
 .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
@@ -106,7 +108,13 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-st
 .urgent-banner{background:linear-gradient(135deg,var(--red-600),#D32F2F);color:var(--white);padding:14px 0;text-align:center;font-size:.88rem;margin-top:calc(var(--hdr) + var(--mock-h))}
 .urgent-banner strong{font-family:var(--font-d);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
 .urgent-banner a{color:var(--gold-light);text-decoration:underline}
-.urgent-banner + .hero{margin-top:0}
+.urgent-banner:not([hidden]) ~ .hero{margin-top:0}
+.urgent-banner[hidden]{display:none}
+:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.team-card{display:block}
+.site-status{padding:16px;background:var(--green-50);color:var(--green-900)}
+.site-status[hidden]{display:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 
 /* ── News Cards ── */
 .news-grid{display:grid;grid-template-columns:1fr;gap:16px}
@@ -316,11 +324,8 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-st
 </head>
 <body>
 
-<!-- ══════════ MOCK BANNER ══════════ -->
-<div class="mock-banner"><span>ENTWURF — Dies ist nicht die offizielle Webseite der SG Estetal</span></div>
-
 <!-- ══════════ URGENT BANNER ══════════ -->
-<div class="urgent-banner" id="urgentBanner"></div>
+<div class="urgent-banner" id="urgentBanner" hidden></div>
 
 <!-- ══════════ HEADER ══════════ -->
 <header class="header" id="header">
@@ -340,7 +345,7 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-st
       <a href="#verein">Verein</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-    <button class="hamburger" id="hamburger" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
   </div>
 </header>
 <nav class="mobile-menu" id="mobileMenu">
@@ -369,6 +374,8 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-st
 </section>
 
 <!-- ══════════ NEWS ══════════ -->
+<div class="site-status" id="siteStatus" role="status">Inhalte werden geladen …</div>
+<noscript><p class="site-status">Bitte JavaScript aktivieren, um Mannschaften und Neuigkeiten zu sehen. Kontakt: <a href="mailto:fussball@sg-estetal.de">fussball@sg-estetal.de</a>.</p></noscript>
 <section class="section" id="news">
   <div class="container">
     <div class="section__header fade-up">
@@ -460,7 +467,7 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-st
       <div class="section__divider"></div>
     </div>
     <div class="map-wrapper fade-up">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2394.5!2d9.85!3d53.35!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sSportplatz+Trelde!5e0!3m2!1sde!2sde!4v1" allowfullscreen loading="lazy" title="Sportplatz Trelde"></iframe>
+      <p style="padding:24px">Sportplatz Trelde, 21255 Kakenstorf<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Sportplatz+Trelde+Kakenstorf" target="_blank" rel="noopener noreferrer" style="color:var(--green-700);text-decoration:underline">Route in Google Maps öffnen ↗</a></p>
     </div>
     <div class="location-info" id="locationInfo"></div>
   </div>
@@ -530,6 +537,7 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-st
         <div class="footer__col-title">Rechtliches</div>
         <a href="#impressum" onclick="openLegal('impressum');return false">Impressum</a>
         <a href="#datenschutz" onclick="openLegal('datenschutz');return false">Datenschutzerklärung</a>
+        <a href="admin/">Redaktionslogin</a>
       </div>
       <div>
         <div class="footer__col-title">Folgt uns</div>
@@ -537,7 +545,7 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-st
       </div>
     </div>
     <div class="footer__bottom">
-      <span>© 2025 SG Estetal im SV Trelde-Kakenstorf von 1950 e.V.</span>
+      <span>© <span id="copyrightYear">2026</span> SG Estetal im SV Trelde-Kakenstorf von 1950 e.V.</span>
 
     </div>
   </div>
@@ -549,37 +557,54 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-st
 
 <!-- ═══════════════════════════════════════════
      CMS — Daten werden aus content/*.json geladen
-     Admin-UI unter /admin/ (Decap CMS)
+     Redaktionszugang unter admin/ (Pages CMS)
      ═══════════════════════════════════════════ -->
 <script>
 const CMS = {};
 
+async function readContent(name, fallback) {
+  try {
+    const response = await fetch(`content/${name}`, { cache: 'no-cache' });
+    if (!response.ok) throw new Error(`${name}: HTTP ${response.status}`);
+    return name.endsWith('.json') ? await response.json() : await response.text();
+  } catch (error) {
+    console.error(error);
+    if (fallback === undefined) throw error;
+    CMS.loadFailed = true;
+    return fallback;
+  }
+}
+const contentItems = value => Array.isArray(value) ? value : (value?.items || []);
+function setHash(hash) {
+  if (location.hash !== hash) history.pushState(null,'',hash || location.pathname);
+}
+
 async function loadCMS() {
   const [meta, banner, news, teams, ehrenamt, termine, ansprechpartner, sponsoren, downloads, impressum, datenschutz] = await Promise.all([
-    fetch('content/meta.json').then(r => r.json()),
-    fetch('content/banner.json').then(r => r.json()),
-    fetch('content/news.json').then(r => r.json()),
-    fetch('content/teams.json').then(r => r.json()),
-    fetch('content/ehrenamt.json').then(r => r.json()),
-    fetch('content/termine.json').then(r => r.json()),
-    fetch('content/ansprechpartner.json').then(r => r.json()),
-    fetch('content/sponsoren.json').then(r => r.json()),
-    fetch('content/downloads.json').then(r => r.json()),
-    fetch('content/impressum.html').then(r => r.text()),
-    fetch('content/datenschutz.html').then(r => r.text())
+    readContent('meta.json'),
+    readContent('banner.json', { active: false }),
+    readContent('news.json', { items: [] }),
+    readContent('teams.json', { teams: [] }),
+    readContent('ehrenamt.json', { positionen: [] }),
+    readContent('termine.json', { items: [] }),
+    readContent('ansprechpartner.json', { items: [] }),
+    readContent('sponsoren.json', { items: [] }),
+    readContent('downloads.json', { items: [] }),
+    readContent('impressum.html', '<p>Das Impressum konnte nicht geladen werden. Bitte laden Sie die Seite erneut.</p>'),
+    readContent('datenschutz.html', '<p>Die Datenschutzerklärung konnte nicht geladen werden. Bitte laden Sie die Seite erneut.</p>')
   ]);
 
   CMS.meta = meta;
   CMS.urgentBanner = banner;
-  CMS.news = Array.isArray(news) ? news : (news.items || news);
+  CMS.news = contentItems(news).sort((a,b) => b.date.localeCompare(a.date));
   CMS.teamsLastUpdated = teams.lastUpdated;
   CMS.teams = teams.teams;
   CMS.ehrenamtLastUpdated = ehrenamt.lastUpdated;
   CMS.ehrenamt = ehrenamt.positionen;
-  CMS.termine = Array.isArray(termine) ? termine : (termine.items || termine);
-  CMS.ansprechpartner = Array.isArray(ansprechpartner) ? ansprechpartner : (ansprechpartner.items || ansprechpartner);
-  CMS.sponsoren = Array.isArray(sponsoren) ? sponsoren : (sponsoren.items || sponsoren);
-  CMS.downloads = Array.isArray(downloads) ? downloads : (downloads.items || downloads);
+  CMS.termine = contentItems(termine);
+  CMS.ansprechpartner = contentItems(ansprechpartner);
+  CMS.sponsoren = contentItems(sponsoren);
+  CMS.downloads = contentItems(downloads);
   CMS.impressum = impressum;
   CMS.datenschutz = datenschutz;
 }
@@ -587,15 +612,23 @@ async function loadCMS() {
 /* ═════════════════════════════════════
    RENDER FUNCTIONS
    ═════════════════════════════════════ */
-const fmt = d => new Date(d).toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric'});
+const fmt = d => d ? new Date(d).toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit',year:'numeric'}) : 'wird aktualisiert';
 const fmtL = d => new Date(d).toLocaleDateString('de-DE',{day:'numeric',month:'long',year:'numeric'});
 const catBadge = c => `<span class="badge ${({Herren:'',Senioren:'badge--gold',Jugend:'badge--outline'})[c]||''}">${c}</span>`;
+
+// Kontakt-Eintrag (Telefon oder E-Mail) als klickbarer Link
+const kontaktLink = k => k.includes('@')
+  ? `<a href="mailto:${k}" style="color:var(--green-700)">${k}</a>`
+  : `<a href="tel:${k.replace(/[^0-9+]/g,'')}" style="color:var(--green-700)">${k}</a>`;
+const kontaktHtml = t => (t.kontakt && t.kontakt.length)
+  ? t.kontakt.map(kontaktLink).join(' &middot; ') : '';
 
 // Urgent Banner
 function renderBanner() {
   const b = CMS.urgentBanner;
   const el = document.getElementById('urgentBanner');
-  if (!b.active) { el.style.display = 'none'; return; }
+  el.hidden = !b.active;
+  if (!b.active) return;
   el.innerHTML = `<div class="container">${b.link ? `<a href="${b.link}">${b.text}</a>` : b.text}</div>`;
 }
 
@@ -642,7 +675,7 @@ function renderTeams() {
   document.getElementById('teamsTimestamp').innerHTML = `Stand: ${fmt(CMS.teamsLastUpdated)}`;
   document.getElementById('teamsGrid').innerHTML = CMS.teams.map((t,i) => {
     const trainerWarning = t.trainer.includes('gesucht') ? ' style="color:var(--red-600);font-weight:600"' : '';
-    return `<div class="team-card fade-up stagger-${(i%6)+1}" style="cursor:pointer" onclick="openTeam('${t.slug}')">
+    return `<a class="team-card fade-up stagger-${(i%6)+1}" href="#mannschaft/${t.slug}">
       <div class="team-card__category">${catBadge(t.category)}</div>
       <div class="team-card__name">${t.name}</div>
       <div class="team-card__info">
@@ -650,20 +683,24 @@ function renderTeams() {
         <div class="team-card__row"><span class="team-card__icon">👤</span><span${trainerWarning}><span class="team-card__label">Trainer:</span> ${t.trainer}</span></div>
         <div class="team-card__row"><span class="team-card__icon">⏰</span><span><span class="team-card__label">Training:</span> ${t.training}</span></div>
         <div class="team-card__row"><span class="team-card__icon">📍</span><span>${t.ort}</span></div>
+        ${t.jahrgang ? `<div class="team-card__row"><span class="team-card__icon">🎂</span><span><span class="team-card__label">Jahrgang:</span> ${t.jahrgang}</span></div>` : ''}
       </div>
-    </div>`;
+    </a>`;
   }).join('');
 }
 
 // Termine
 function renderTermine() {
-  document.getElementById('eventsList').innerHTML = CMS.termine.map((e,i) => {
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const upcoming = CMS.termine.filter(e => new Date(`${e.date}T00:00:00`) >= today).sort((a,b) => a.date.localeCompare(b.date));
+  document.getElementById('eventsList').innerHTML = upcoming.length ? upcoming.map((e,i) => {
     const d = new Date(e.date);
     return `<div class="event-item fade-up stagger-${(i%6)+1}">
       <div class="event-date"><div class="event-date__day">${d.getDate()}</div><div class="event-date__month">${d.toLocaleDateString('de-DE',{month:'short'}).toUpperCase()}</div></div>
       <div class="event-info"><div class="event-info__title">${e.title}</div><div class="event-info__detail">${e.detail}</div></div>
     </div>`;
-  }).join('');
+  }).join('') : '<p>Neue Termine werden hier bekannt gegeben. Die regelmäßigen Trainingszeiten findet ihr bei den Mannschaften.</p>';
 }
 
 // Ansprechpartner
@@ -673,7 +710,7 @@ function renderContacts() {
       <div class="contact-card__avatar">${c.icon}</div>
       <div class="contact-card__info">
         <div class="contact-card__role">${c.rolle}</div>
-        <div class="contact-card__name">${c.name}</div>
+        ${c.name && c.name !== 'Wird bekannt gegeben' ? `<div class="contact-card__name">${c.name}</div>` : ''}
         <div class="contact-card__detail"><a href="mailto:${c.email}">${c.email}</a></div>
       </div>
     </div>`).join('');
@@ -717,7 +754,7 @@ function renderCTA() {
       <div class="cta-box__row">📷 <a href="${CMS.meta.social.instagram}" target="_blank">Instagram</a></div>
       <p class="cta-box__text" style="margin-top:12px">Für Fragen rund um Mannschaften, Training oder Mitgliedschaft.</p>
     </div>`;
-  document.getElementById('downloadsList').innerHTML = CMS.downloads.map(d => `
+  document.getElementById('downloadsList').innerHTML = CMS.downloads.filter(d => d.url && d.url !== '#').map(d => `
     <a href="${d.url}" target="_blank" class="download-item">
       <span class="download-item__icon">📄</span>
       <span class="download-item__info"><span class="download-item__name">${d.name}</span><span class="download-item__size">${d.typ}</span></span>
@@ -726,6 +763,7 @@ function renderCTA() {
 
 // Social & Footer
 function renderFooter() {
+  document.getElementById('copyrightYear').textContent = new Date().getFullYear();
   document.getElementById('socialLinks').innerHTML = `
     <a href="${CMS.meta.social.facebook}" target="_blank" aria-label="Facebook">f</a>
     <a href="${CMS.meta.social.instagram}" target="_blank" aria-label="Instagram">ig</a>`;
@@ -734,7 +772,7 @@ function renderFooter() {
 // News Detail
 function openNews(id) {
   const a = CMS.news.find(n=>n.id===id); if(!a) return;
-  history.pushState(null,'',`#artikel/${id}`);
+  setHash(`#artikel/${id}`);
   document.getElementById('newsDetail').innerHTML = `
     <button class="news-detail__close" onclick="closeOverlay()" aria-label="Schließen">✕</button>
     <div class="news-detail__date">${fmtL(a.date)}</div>
@@ -747,7 +785,7 @@ function openNews(id) {
 // Legal Pages
 function openLegal(type) {
   const content = type === 'impressum' ? CMS.impressum : CMS.datenschutz;
-  history.pushState(null,'',`#${type}`);
+  setHash(`#${type}`);
   document.getElementById('newsDetail').innerHTML = `
     <button class="news-detail__close" onclick="closeOverlay()" aria-label="Schließen">✕</button>
     <div class="news-detail__body">${content}</div>`;
@@ -758,20 +796,20 @@ function openLegal(type) {
 function closeOverlay() {
   document.getElementById('newsOverlay').classList.remove('open');
   document.body.style.overflow='';
-  history.pushState(null,'',window.location.pathname);
+  setHash('');
 }
 document.getElementById('newsOverlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeOverlay()});
 
 function closeSubpage() {
   document.getElementById('subpageOverlay').classList.remove('open');
   document.body.style.overflow='';
-  history.pushState(null,'',window.location.pathname);
+  setHash('');
 }
 
 // ── Team Detail Page ──
 function openTeam(slug) {
   const t = CMS.teams.find(x=>x.slug===slug); if(!t) return;
-  history.pushState(null,'',`#mannschaft/${slug}`);
+  setHash(`#mannschaft/${slug}`);
   const trainerHtml = t.trainer.includes('gesucht')
     ? `<strong style="color:var(--red-600)">${t.trainer}</strong> <a href="mailto:${CMS.meta.email}?subject=Trainer ${t.name}" style="color:var(--red-600);font-size:.8rem">(Jetzt melden!)</a>`
     : `<strong>${t.trainer}</strong>`;
@@ -784,6 +822,7 @@ function openTeam(slug) {
       <div class="subpage__meta-item"><span class="icon">👤</span> Trainer: ${trainerHtml}</div>
       <div class="subpage__meta-item"><span class="icon">⏰</span> Training: <strong>${t.training}</strong></div>
       <div class="subpage__meta-item"><span class="icon">📍</span> <strong>${t.ort}</strong></div>
+      ${t.jahrgang ? `<div class="subpage__meta-item"><span class="icon">🎂</span> Jahrgang: <strong>${t.jahrgang}</strong></div>` : ''}
     </div>
     <div class="subpage__body"><p>${t.beschreibung||''}</p></div>
     ${t.fussballde ? `<a href="${t.fussballde}" target="_blank" class="subpage__fussballde">⚽ Auf fussball.de ansehen →</a>` : ''}
@@ -796,6 +835,7 @@ function openTeam(slug) {
     </div>
     <div class="subpage__section">
       <h3 class="subpage__section-title">Kontakt</h3>
+      ${kontaktHtml(t) ? `<p style="font-size:.88rem;color:var(--gray-600);margin-bottom:8px">Direkt beim Trainerteam: ${kontaktHtml(t)}</p>` : ''}
       <p style="font-size:.88rem;color:var(--gray-600)">Interesse mitzuspielen oder Fragen zum Training?<br>
       Schreib uns: <a href="mailto:${CMS.meta.email}" style="color:var(--green-700);font-weight:600">${CMS.meta.email}</a></p>
     </div>
@@ -807,11 +847,11 @@ function openTeam(slug) {
 
 // ── Aktuelles Stream Page ──
 function openAktuelles() {
-  history.pushState(null,'',`#aktuelles`);
+  setHash('#aktuelles');
   document.getElementById('subpageContent').innerHTML = `
     <button class="subpage__back" onclick="closeSubpage()">← Zurück zur Startseite</button>
     <span class="subpage__badge badge badge--outline" style="color:var(--green-700);border-color:var(--green-700)">Neuigkeiten</span>
-    <h1 class="subpage__title">Alle Aktuelles</h1>
+    <h1 class="subpage__title">Alle Neuigkeiten</h1>
     <div class="news-stream">
       ${CMS.news.map(n => `
         <div class="news-stream-item" onclick="closeSubpage();setTimeout(()=>openNews('${n.id}'),100)">
@@ -831,7 +871,7 @@ function openAktuelles() {
 
 // ── Mitmachen / Ehrenamt Landing ──
 function openMitmachen() {
-  history.pushState(null,'',`#mitmachen`);
+  setHash('#mitmachen');
   const urgent = CMS.ehrenamt.filter(e=>e.urgent);
   const regular = CMS.ehrenamt.filter(e=>!e.urgent);
   document.getElementById('subpageContent').innerHTML = `
@@ -872,7 +912,7 @@ function openMitmachen() {
       <h3 style="font-family:var(--font-d);font-weight:700;font-size:.95rem;text-transform:uppercase;color:var(--green-900);margin-bottom:8px">Was bringt mir ein Ehrenamt?</h3>
       <ul style="font-size:.88rem;color:var(--gray-600);line-height:1.8;padding-left:20px">
         <li>Gemeinschaft und Zusammenhalt im Verein</li>
-        <li>Ehrenamtspauschale bis zu 840 EUR/Jahr steuerfrei</li>
+        <li>Informationen zu Unterstützung und Aufwandsentschädigung erhaltet ihr beim Verein</li>
         <li>Trainerschein-Ausbildung wird vom Verein unterstützt</li>
         <li>Persönliche Weiterentwicklung und Verantwortung</li>
         <li>Spaß am Fußball und an der Vereinsarbeit</li>
@@ -885,6 +925,9 @@ function openMitmachen() {
 }
 
 function checkHash() {
+  document.getElementById('newsOverlay').classList.remove('open');
+  document.getElementById('subpageOverlay').classList.remove('open');
+  document.body.style.overflow='';
   const h = window.location.hash;
   if(h.startsWith('#artikel/')) openNews(h.replace('#artikel/',''));
   else if(h.startsWith('#mannschaft/')) openTeam(h.replace('#mannschaft/',''));
@@ -896,8 +939,15 @@ function checkHash() {
 
 // Interactivity
 const hamburger=document.getElementById('hamburger'),mobileMenu=document.getElementById('mobileMenu');
-hamburger.addEventListener('click',()=>{hamburger.classList.toggle('open');mobileMenu.classList.toggle('open')});
-mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hamburger.classList.remove('open');mobileMenu.classList.remove('open')}));
+function setMobileMenu(open) {
+  hamburger.classList.toggle('open',open);
+  mobileMenu.classList.toggle('open',open);
+  hamburger.setAttribute('aria-expanded',String(open));
+  hamburger.setAttribute('aria-label',open ? 'Menü schließen' : 'Menü öffnen');
+}
+hamburger.addEventListener('click',()=>setMobileMenu(!mobileMenu.classList.contains('open')));
+mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMobileMenu(false)));
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){setMobileMenu(false);closeOverlay();closeSubpage()}});
 window.addEventListener('scroll',()=>document.getElementById('header').classList.toggle('scrolled',window.scrollY>20),{passive:true});
 const btt=document.getElementById('backToTop');
 window.addEventListener('scroll',()=>btt.classList.toggle('visible',window.scrollY>400),{passive:true});
@@ -917,6 +967,14 @@ loadCMS().then(() => {
   renderTermine(); renderContacts(); renderAbout(); renderLocation();
   renderSponsoren(); renderCTA(); renderFooter(); observe(); checkHash();
   window.addEventListener('hashchange',checkHash);
+  window.addEventListener('popstate',checkHash);
+  const status = document.getElementById('siteStatus');
+  status.hidden = !CMS.loadFailed;
+  status.textContent = 'Einige Inhalte konnten nicht geladen werden. Bitte laden Sie die Seite erneut.';
+}).catch(error => {
+  console.error(error);
+  document.getElementById('siteStatus').innerHTML = 'Die Inhalte konnten nicht geladen werden. <button onclick="location.reload()">Erneut versuchen</button> oder <a href="mailto:fussball@sg-estetal.de">Kontakt aufnehmen</a>.';
+  document.querySelectorAll('.fade-up').forEach(el=>el.classList.add('visible'));
 });
 </script>
 </body>
