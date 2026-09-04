@@ -7,8 +7,8 @@ local fonts and licenses are in `fonts/`, images and the membership PDF in `imag
 The editor is hosted Pages CMS, configured by `.pages.yml`. `admin/index.html` links
 to the editorial login. Decap and Sveltia are no longer the active CMS.
 
-The publication branch is `gh-pages`; editors save directly there. Fetch and review
-those changes before releasing code, and synchronize them back into `master`.
+The publication branch is `main`; editors save directly there. Fetch and review
+those changes before releasing code so CMS edits are never overwritten.
 Do not restore older CMS configurations or replace live editorial content with stale copies.
 List JSON uses `{ "items": [...] }`; teams and volunteer roles retain their `teams`
 and `positionen` arrays with `lastUpdated`.

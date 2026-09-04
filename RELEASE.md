@@ -35,15 +35,16 @@ Screenshots werden nur lokal unter `.release-check/` abgelegt.
 
 ## Veröffentlichung
 
-`gh-pages` ist der Live-Branch und das Ziel für CMS-Inhalte. Vor Releases den Remote-Stand
-abrufen und CMS-Änderungen übernehmen; beide Branches nach dem Release synchron halten.
+`main` ist der einzige Live-Branch: Code, CMS-Inhalte und Veröffentlichung liegen dort.
+Vor Releases den Remote-Stand abrufen, damit CMS-Änderungen nicht überschrieben werden.
+Größere technische Arbeiten in einem Arbeitsbranch vorbereiten und nach `main` mergen.
 Keine Backups, CSV-Rohdaten oder lokalen Zugangsdaten veröffentlichen.
 
 ## Domain umstellen
 
 1. Hauptdomain festlegen und in GitHub verifizieren.
 2. Unter Repository → Settings → Pages die Hauptdomain eintragen. Bei Branch-Deployment
-   wird dabei `CNAME` auf `gh-pages` angelegt; diese Datei in künftigen Releases erhalten.
+   wird dabei `CNAME` auf `main` angelegt; diese Datei in künftigen Releases erhalten.
 3. Beim DNS-Anbieter für die Hauptdomain die GitHub-Pages-A-Records setzen:
    `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
    Für `www` einen CNAME auf `blubbernase.github.io` setzen (ohne `/estetal/`).

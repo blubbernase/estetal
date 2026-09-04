@@ -11,7 +11,7 @@ auf der Vereinsseite ändern. **Technische Vorkenntnisse sind nicht nötig.**
 2. Öffne **https://app.pagescms.org** und melde dich mit genau der E-Mail-Adresse an,
    an die die Einladung ging.
 3. Danach siehst du die Seite `estetal` und darin alle Bereiche zum Bearbeiten.
-4. Wähle den Branch `gh-pages`. Das ist der veröffentlichte Stand der Website.
+4. Wähle den Branch `main`. Das ist der veröffentlichte Stand der Website.
 
 Du brauchst **kein** GitHub-Konto und musst nichts installieren.
 

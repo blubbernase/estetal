@@ -32,4 +32,4 @@ No coverage threshold is configured. `scripts/smoke.cjs` uses an available Playw
 
 History uses brief, descriptive German subjects, often prefixed with `Fix CMS:` or `Mock-Banner:`. Use the same direct style, e.g. `Mannschaftsdetails: Kontaktliste ergänzen`. Keep content and implementation changes separable where practical.
 
-PRs should explain the user-visible effect, identify changed content schemas or CMS fields, link related issues, and include desktop/mobile screenshots for UI work. Before merging `master` into `gh-pages`, compare `content/` and `admin/`: CMS edits on the deploy branch must not be overwritten.
+PRs should explain the user-visible effect, identify changed content schemas or CMS fields, link related issues, and include desktop/mobile screenshots for UI work. Before merging a work branch into `main`, compare `content/` and `admin/`: CMS edits made on `main` must not be overwritten.
