@@ -13,3 +13,5 @@ backup-old-webseite/
 *Mannschaftsdaten*.csv
 trainer-abfrage-whatsapp.md
 .release-check/
+
+.env
