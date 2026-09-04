@@ -1,0 +1,321 @@
+# Pages CMS — Konfiguration für die Redaktion der SG-Estetal-Seite
+# Bearbeitet wird unter https://app.pagescms.org
+# Änderungen hier wirken sich direkt auf die Eingabemasken der Redakteure aus.
+
+media:
+  input: images
+  output: images        # ohne führenden Slash — die Seite lädt Bilder projekt-relativ
+  rename: safe
+  categories: [image, document]
+
+content:
+  # ── Startseite: roter Hinweisbanner ──────────────────────────────
+  - name: banner
+    label: Hinweis-Banner
+    type: file
+    path: content/banner.json
+    fields:
+      - name: active
+        label: Banner anzeigen?
+        type: boolean
+        description: Ausschalten blendet den roten Balken auf der Startseite komplett aus.
+      - name: text
+        label: Text
+        type: string
+        description: "HTML erlaubt, z.B. <strong>fett</strong>. Ein Pfeil am Ende (→) sieht gut aus."
+      - name: link
+        label: Link-Ziel
+        type: string
+        required: false
+        description: "Optional. Interner Sprung wie #ehrenamt oder eine vollständige Adresse."
+
+  # ── News ─────────────────────────────────────────────────────────
+  - name: news
+    label: News
+    type: file
+    path: content/news.json
+    fields:
+      - name: items
+        label: Artikel
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Titel
+            type: string
+          - name: id
+            label: URL-Kürzel
+            type: string
+            description: "Erscheint in der Adresse. Nur Kleinbuchstaben und Bindestriche, z.B. saison-2025-26. Nachträglich ändern macht geteilte Links ungültig."
+          - name: date
+            label: Datum
+            type: date
+            options: { time: false, format: yyyy-MM-dd }
+          - name: excerpt
+            label: Kurztext
+            type: text
+            description: Zwei bis drei Sätze. Erscheint in der Übersicht auf der Startseite.
+          - name: body
+            label: Volltext
+            type: text
+            description: "HTML. Absätze in <p>…</p> setzen."
+          - name: image
+            label: Bild
+            type: image
+            required: false
+
+  # ── Mannschaften ─────────────────────────────────────────────────
+  - name: teams
+    label: Mannschaften
+    type: file
+    path: content/teams.json
+    fields:
+      - name: lastUpdated
+        label: Stand vom
+        type: date
+        options: { time: false, format: yyyy-MM-dd }
+        description: Wird unter der Mannschaftsübersicht angezeigt. Bitte nach Änderungen aktualisieren.
+      - name: teams
+        label: Mannschaften
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: slug
+            label: URL-Kürzel
+            type: string
+            description: "Erscheint in der Adresse (#mannschaft/…). Nur Kleinbuchstaben und Bindestriche. Nachträglich ändern macht geteilte Links ungültig."
+          - name: category
+            label: Kategorie
+            type: select
+            options:
+              values: [Herren, Senioren, Jugend]
+          - name: jahrgang
+            label: Jahrgang
+            type: string
+            required: false
+            description: "Nur bei Jugendmannschaften, z.B. 2014 / 2015"
+          - name: liga
+            label: Liga / Spielklasse
+            type: string
+          - name: trainer
+            label: Trainer
+            type: string
+            description: 'Mehrere Namen mit Komma trennen. Steht das Wort "gesucht" im Text, hebt die Seite die Mannschaft automatisch rot als Trainersuche hervor.'
+          - name: kontakt
+            label: Trainer-Kontakt
+            type: string
+            list: true
+            required: false
+            description: "Telefonnummer oder E-Mail. ACHTUNG — erscheint öffentlich auf der Mannschaftsseite. Nur mit Einverständnis der Person eintragen."
+          - name: training
+            label: Trainingszeiten
+            type: string
+          - name: ort
+            label: Trainingsort
+            type: string
+          - name: beschreibung
+            label: Beschreibung
+            type: text
+            required: false
+          - name: fussballde
+            label: fussball.de-Link
+            type: string
+            required: false
+          - name: kader
+            label: Kader
+            type: string
+            list: true
+            required: false
+            description: Ein Name pro Eintrag. Leer lassen, wenn kein Kader veröffentlicht werden soll.
+
+  # ── Ehrenamt ─────────────────────────────────────────────────────
+  - name: ehrenamt
+    label: Ehrenamt
+    type: file
+    path: content/ehrenamt.json
+    fields:
+      - name: lastUpdated
+        label: Stand vom
+        type: date
+        options: { time: false, format: yyyy-MM-dd }
+      - name: positionen
+        label: Offene Positionen
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Position
+            type: string
+          - name: urgent
+            label: Dringend gesucht?
+            type: boolean
+            default: false
+            description: Markiert die Position rot und zählt sie oben als "Dringend gesucht".
+          - name: text
+            label: Beschreibung
+            type: text
+          - name: aufwand
+            label: Zeitaufwand
+            type: string
+          - name: kontakt
+            label: Kontakt-E-Mail
+            type: string
+
+  # ── Termine ──────────────────────────────────────────────────────
+  - name: termine
+    label: Termine
+    type: file
+    path: content/termine.json
+    fields:
+      - name: items
+        label: Termine
+        type: object
+        list: true
+        fields:
+          - name: date
+            label: Datum
+            type: date
+            options: { time: false, format: yyyy-MM-dd }
+          - name: title
+            label: Titel
+            type: string
+          - name: detail
+            label: Details
+            type: string
+
+  # ── Ansprechpartner ──────────────────────────────────────────────
+  - name: ansprechpartner
+    label: Ansprechpartner
+    type: file
+    path: content/ansprechpartner.json
+    fields:
+      - name: items
+        label: Ansprechpartner
+        type: object
+        list: true
+        fields:
+          - name: rolle
+            label: Funktion
+            type: string
+          - name: name
+            label: Name
+            type: string
+            description: '"Wird bekannt gegeben" eintragen, solange die Position unbesetzt ist.'
+          - name: email
+            label: E-Mail
+            type: string
+          - name: icon
+            label: Symbol
+            type: string
+            description: Ein einzelnes Emoji, z.B. 👔 ⚽ 🏆 🤝 🌱 📱
+
+  # ── Sponsoren ────────────────────────────────────────────────────
+  - name: sponsoren
+    label: Sponsoren
+    type: file
+    path: content/sponsoren.json
+    fields:
+      - name: items
+        label: Sponsoren
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Name
+            type: string
+          - name: url
+            label: Link
+            type: string
+
+  # ── Downloads ────────────────────────────────────────────────────
+  - name: downloads
+    label: Downloads
+    type: file
+    path: content/downloads.json
+    fields:
+      - name: items
+        label: Dokumente
+        type: object
+        list: true
+        fields:
+          - name: name
+            label: Bezeichnung
+            type: string
+          - name: url
+            label: Link zur Datei
+            type: string
+            description: 'Datei über den Medien-Bereich hochladen und die Adresse hier eintragen. "#" bedeutet: noch keine Datei hinterlegt.'
+          - name: typ
+            label: Dateityp
+            type: string
+
+  # ── Vereinsdaten ─────────────────────────────────────────────────
+  - name: meta
+    label: Vereinsdaten
+    type: file
+    path: content/meta.json
+    fields:
+      - name: vereinName
+        label: Vereinsname
+        type: string
+      - name: stammverein
+        label: Stammverein
+        type: string
+      - name: gruendung
+        label: Gründungsjahr
+        type: number
+      - name: motto
+        label: Motto
+        type: string
+      - name: email
+        label: Zentrale E-Mail
+        type: string
+        description: Wird an vielen Stellen der Seite als Kontaktadresse eingesetzt.
+      - name: adresse
+        label: Sportplatz-Adresse
+        type: string
+      - name: vereinsanschrift
+        label: Vereinsanschrift
+        type: string
+      - name: vereinsregister
+        label: Vereinsregister
+        type: string
+      - name: mitgliedschaftPDF
+        label: Aufnahmeantrag (Link)
+        type: string
+      - name: social
+        label: Social Media
+        type: object
+        fields:
+          - name: facebook
+            label: Facebook
+            type: string
+          - name: instagram
+            label: Instagram
+            type: string
+
+  # ── Rechtstexte ──────────────────────────────────────────────────
+  - name: impressum
+    label: Impressum
+    type: file
+    path: content/impressum.html
+    format: raw
+    fields:
+      - name: body
+        label: Impressum (HTML)
+        type: code
+        options: { language: html }
+
+  - name: datenschutz
+    label: Datenschutz
+    type: file
+    path: content/datenschutz.html
+    format: raw
+    fields:
+      - name: body
+        label: Datenschutzerklärung (HTML)
+        type: code
+        options: { language: html }
