@@ -13,7 +13,6 @@ Do not restore older CMS configurations or replace live editorial content with s
 List JSON uses `{ "items": [...] }`; teams and volunteer roles retain their `teams`
 and `positionen` arrays with `lastUpdated`.
 
-Run `node scripts/check-release.cjs`; run with `--final` before domain cutover.
 Use HTTP locally (`python -m http.server 8080`). Browser checks and screenshots are
 in `RELEASE.md`. Final publication depends on the open items listed there.
 

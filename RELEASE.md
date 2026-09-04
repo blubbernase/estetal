@@ -22,12 +22,9 @@ Vergangene Termine und Downloads mit `#` werden nicht als aktuelle Angebote ange
 ## Prüfen
 
 ```powershell
-node scripts/check-release.cjs
-node scripts/check-release.cjs --final
 python -m http.server 8080
 ```
 
-`--final` blockiert, solange Platzhalter im Impressum verbleiben.
 `scripts/smoke.cjs` prüft Desktop/Handy, Teamkontakte, Hash-Links, Browser-Zurück,
 PDF, Assets, Redaktionslink und simulierte Ladefehler. Es benötigt Playwright und Chromium;
 bei vorhandener Installation können `PLAYWRIGHT_MODULE` und `CHROMIUM_PATH` gesetzt werden.

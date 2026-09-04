@@ -8,7 +8,7 @@ This static SG Estetal website has no package manager, build system, or JavaScri
 
 ## Build, Test, and Development Commands
 
-There is no build or lint step. Run `node scripts/check-release.cjs` for content/schema/asset validation; `--final` also rejects unfinished legal placeholders. Serve the repository over HTTP because `index.html` loads content with `fetch()`:
+There is no build or lint step. Serve the repository over HTTP because `index.html` loads content with `fetch()`:
 
 ```powershell
 python -m http.server 8080
