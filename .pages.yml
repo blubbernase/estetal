@@ -240,6 +240,17 @@ content:
           - name: url
             label: Link
             type: string
+            description: Vollständige Adresse der Sponsoren-Website, z.B. https://www.beispiel.de
+          - name: logo
+            label: Logo
+            type: image
+            required: false
+            description: Optional. Ohne Logo erscheint der Name als Schriftzug. Am besten PNG mit transparentem Hintergrund oder SVG.
+          - name: caption
+            label: Beschriftung unter dem Logo
+            type: string
+            required: false
+            description: Optional. Nur nötig, wenn das Logo allein den Namen nicht erkennen lässt.
 
   # ── Downloads ────────────────────────────────────────────────────
   - name: downloads
