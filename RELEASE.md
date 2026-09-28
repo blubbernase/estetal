@@ -7,9 +7,8 @@ Pages CMS, lokal ausgelieferte Schriften, bereinigte Navigation und Ladefehleran
 JSON-Listen werden einheitlich als `{ "items": [...] }` gespeichert, passend zu `.pages.yml`.
 Vergangene Termine und Downloads mit `#` werden nicht als aktuelle Angebote angezeigt.
 
-## Vor der Domainumstellung noch offen
+## Noch offen
 
-- Die gewünschte Hauptdomain wurde noch nicht benannt.
 - Die redaktionell verantwortliche Person in `content/impressum.html` fehlt noch.
 - Der Verein muss Impressum und den auf GitHub Pages angepassten Datenschutztext bestätigen.
   Die Vorstandsnamen und VR 1072 wurden aus den offiziellen Vereinsseiten übernommen:
@@ -51,4 +50,5 @@ Keine Backups, CSV-Rohdaten oder lokalen Zugangsdaten veröffentlichen.
 5. Hauptdomain und `www`, Teamlinks, Bilder, PDF, Impressum und Redaktion erneut prüfen.
 
 Quelle: [GitHub-Domainanleitung](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
-GitHub-Pages-Einstellungen und DNS wurden für diesen vorbereiteten Release noch nicht geändert.
+`sg-estetal.de` ist seit 2026-09-29 umgestellt (DNS bei IONOS, `CNAME` im Repo). Offen: die `.com`-Domain,
+die in einem anderen Konto liegt.
