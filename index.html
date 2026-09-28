@@ -7,7 +7,21 @@
 <link rel="canonical" href="https://sg-estetal.de/">
 <meta name="description" content="SG Estetal: Mannschaften, Trainingszeiten, Trainerkontakte und Neuigkeiten. Fußball im Estetal – von den Bambini bis zu den Senioren.">
 <link rel="icon" href="images/logo-sge.png" type="image/png">
-<link rel="stylesheet" href="fonts/fonts.css">
+<script>document.documentElement.classList.add('cms-loading');setTimeout(function(){document.documentElement.classList.remove('cms-loading')},3000)</script>
+<link rel="preload" as="image" href="images/gallery-1.jpg" fetchpriority="high">
+<style>
+/* Self-hosted fonts, licensed under SIL Open Font License; see OFL files. */
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/barlow-400.ttf') format('truetype')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/barlow-600.ttf') format('truetype')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('fonts/barlow-700.ttf') format('truetype')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:800;font-display:swap;src:url('fonts/barlow-800.ttf') format('truetype')}
+@font-face{font-family:'Libre Franklin';font-style:normal;font-weight:300;font-display:swap;src:url('fonts/libre-300.ttf') format('truetype')}
+@font-face{font-family:'Libre Franklin';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/libre-400.ttf') format('truetype')}
+@font-face{font-family:'Libre Franklin';font-style:normal;font-weight:500;font-display:swap;src:url('fonts/libre-500.ttf') format('truetype')}
+@font-face{font-family:'Libre Franklin';font-style:normal;font-weight:600;font-display:swap;src:url('fonts/libre-600.ttf') format('truetype')}
+@font-face{font-family:'Libre Franklin';font-style:italic;font-weight:400;font-display:swap;src:url('fonts/libre-italic.ttf') format('truetype')}
+.cms-loading body>:not(header){visibility:hidden}
+</style>
 <style>
 :root {
   --green-900: #0D3B0F; --green-800: #14511A; --green-700: #1B5E20;
@@ -339,8 +353,8 @@ img{max-width:100%;display:block}a{color:inherit;text-decoration:none}ul{list-st
   <div class="container header__inner">
     <a href="#" class="header__brand">
       <div class="header__logos">
-        <img src="images/logo-svtrelde.gif" alt="SV Trelde">
-        <img src="images/logo-sge.png" alt="SG Estetal">
+        <img src="images/logo-svtrelde.gif" alt="SV Trelde" width="235" height="235">
+        <img src="images/logo-sge.png" alt="SG Estetal" width="200" height="236">
       </div>
       <div class="header__name">SG Estetal<small>im SV Trelde-Kakenstorf</small></div>
     </a>
@@ -984,10 +998,12 @@ loadCMS().then(() => {
   const status = document.getElementById('siteStatus');
   status.hidden = !CMS.loadFailed;
   status.textContent = 'Einige Inhalte konnten nicht geladen werden. Bitte laden Sie die Seite erneut.';
+  document.documentElement.classList.remove('cms-loading');
 }).catch(error => {
   console.error(error);
   document.getElementById('siteStatus').innerHTML = 'Die Inhalte konnten nicht geladen werden. <button onclick="location.reload()">Erneut versuchen</button> oder <a href="mailto:fussball@sg-estetal.de">Kontakt aufnehmen</a>.';
   document.querySelectorAll('.fade-up').forEach(el=>el.classList.add('visible'));
+  document.documentElement.classList.remove('cms-loading');
 });
 </script>
 </body>
