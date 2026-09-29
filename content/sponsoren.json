@@ -1,8 +1,8 @@
 {
   "items": [
     { "name": "ARZ Ambulantes Reha-Zentrum Buchholz", "url": "https://www.reha-zentrum-buchholz.de/", "logo": "images/sponsoren/arz.png" },
-    { "name": "Steffens Automobile", "url": "https://www.steffens-automobile.de/home" },
-    { "name": "Glade Heizöl", "url": "https://glade-heizoel.de" },
+    { "name": "Steffens Automobile", "url": "https://www.steffens-automobile.de/home", "logo": "images/sponsoren/steffens.jpg" },
+    { "name": "Glade Heizöl", "url": "https://glade-heizoel.de", "logo": "images/sponsoren/glade.png" },
     { "name": "Fahrschule Fahrwerk", "url": "https://fahrwerk-christiangrau.de/", "logo": "images/sponsoren/fahrwerk.svg" },
     { "name": "Malermeisterfachbetrieb M. Wentzien", "url": "https://www.wentzien.info", "logo": "images/sponsoren/wentzien.png" },
     { "name": "Struckmeyer Garten- und Landschaftsbau", "url": "https://struckmeyer-kakenstorf.de/", "logo": "images/sponsoren/struckmeyer.png" },
@@ -10,7 +10,7 @@
     { "name": "Feldtmann", "url": "https://www.feldtmann-shop.de/", "logo": "images/sponsoren/feldtmann.jpg" },
     { "name": "PGH Gruppe", "url": "https://pgh-gruppe.de/", "logo": "images/sponsoren/pgh.png" },
     { "name": "Johannsen Golfplatzpflege & Reitsport", "url": "https://www.golf-sport-reiten.de/", "logo": "images/sponsoren/johannsen.png" },
-    { "name": "Kate Stone – Bloodcurse", "url": "https://www.amazon.de/Bloodcurse-Kate-Stone/dp/B0G9VJHF1C" },
+    { "name": "Kate Stone – Bloodcurse", "url": "https://www.amazon.de/Bloodcurse-Kate-Stone/dp/B0G9VJHF1C", "logo": "images/sponsoren/bloodcurse.jpg" },
     { "name": "VGH – Jan Vollmer", "url": "https://www.vgh.de/Jan.Vollmer", "logo": "images/sponsoren/vgh.svg", "caption": "VGH · Jan Vollmer" },
     { "name": "Dachdeckerei Grugel", "url": "https://www.dachdeckerei-grugel.de", "logo": "images/sponsoren/grugel.webp" },
     { "name": "KARO Energieberatung GmbH", "url": "https://www.karoenergieberatung.de", "logo": "images/sponsoren/karo.png" },
