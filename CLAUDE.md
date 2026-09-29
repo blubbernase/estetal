@@ -13,6 +13,11 @@ Do not restore older CMS configurations or replace live editorial content with s
 List JSON uses `{ "items": [...] }`; teams and volunteer roles retain their `teams`
 and `positionen` arrays with `lastUpdated`.
 
+`index.html` hides everything below the header via the `cms-loading` class until the CMS
+content is rendered (fallback after 3 s). This prevents layout shift; keep the class removal
+in both the success and the error path. Sponsors support optional `logo` (files in
+`images/sponsoren/`) and `caption` fields.
+
 Use HTTP locally (`python -m http.server 8080`). Browser checks and screenshots are
 in `RELEASE.md`. Final publication depends on the open items listed there.
 

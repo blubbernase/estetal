@@ -9,14 +9,14 @@ Vergangene Termine und Downloads mit `#` werden nicht als aktuelle Angebote ange
 
 ## Noch offen
 
-- Die redaktionell verantwortliche Person in `content/impressum.html` fehlt noch.
-- Der Verein muss Impressum und den auf GitHub Pages angepassten Datenschutztext bestätigen.
-  Die Vorstandsnamen und VR 1072 wurden aus den offiziellen Vereinsseiten übernommen:
-  [Vorstand](https://www.sv-trelde-kakenstorf.de/vorstand),
-  [Impressum](https://www.sv-trelde-kakenstorf.de/impressum).
-- Ein vollständiger Redakteurstest mit eingeladener E-Mail-Adresse steht aus:
-  Anmeldung, bestehende News öffnen, Teständerung speichern, Live-Ergebnis prüfen und zurücknehmen.
-  Die lokale Prüfung bestätigt Schema und Website, nicht die Berechtigungen des externen Kontos.
+- Die redaktionell verantwortliche Person (`[Name]`) in `content/impressum.html` fehlt noch.
+- Fünf Ansprechpartner stehen auf „Wird bekannt gegeben“: Jugendleiter, Spielausschuss Herren,
+  Ehrenamtsbeauftragter, Platzwart, Webseite & Social Media. Namen nur mit Einverständnis eintragen.
+- Der Verein muss Impressum und Datenschutztext bestätigen. Vorstand laut
+  [Vereinsseite](https://www.sv-trelde-kakenstorf.de/vorstand), Stand 2026-09-29.
+- `sg-estetal.com` gehört zum Paket der alten Agentur Mediawirbel (Sandra Ströhmer,
+  kontakt@mediawirbel.de) samt alter Website. Kündigung von Website und `.com` am 2026-09-29
+  per Mail angefragt; Bestätigung abwarten. Die `.de` gehört dem Verein.
 
 ## Prüfen
 
@@ -50,5 +50,16 @@ Keine Backups, CSV-Rohdaten oder lokalen Zugangsdaten veröffentlichen.
 5. Hauptdomain und `www`, Teamlinks, Bilder, PDF, Impressum und Redaktion erneut prüfen.
 
 Quelle: [GitHub-Domainanleitung](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
-`sg-estetal.de` ist seit 2026-09-29 umgestellt (DNS bei IONOS, `CNAME` im Repo). Offen: die `.com`-Domain,
-die in einem anderen Konto liegt.
+`sg-estetal.de` ist seit 2026-09-29 umgestellt (DNS bei IONOS, `CNAME` im Repo), HTTPS erzwungen.
+
+## Betrieb
+
+- **DNS** der Zone `sg-estetal.de` liegt bei IONOS und lässt sich per API ändern:
+  `https://api.hosting.ionos.com/dns/v1/zones`, Header `X-API-Key`, Schlüssel als
+  `IONOS_API_KEY` in der lokalen `.env` (nicht versioniert).
+- Nicht anfassen: MX, SPF-TXT, DKIM- und DMARC-CNAMEs, `autodiscover` (E-Mail) sowie der
+  TXT-Eintrag `google-site-verification=…` (sonst geht der Zugang zur Search Console verloren).
+- **Google Search Console**: Domain-Property `sg-estetal.de`, Sitemap
+  `https://sg-estetal.de/sitemap.xml` eingereicht.
+- GitHub Pages cacht Dateien 10 Minuten; das ist nicht einstellbar.
+- Redaktion: Einladung über Pages CMS, Anleitung als PDF in `docs/` (Quelle `docs/kurzanleitung.html`).
